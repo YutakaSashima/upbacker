@@ -18,6 +18,9 @@
 		455328EA1A0CEBA70025AD71 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455328E91A0CEBA70025AD71 /* MapKit.framework */; };
 		455328EC1A0CEBAE0025AD71 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455328EB1A0CEBAE0025AD71 /* CoreLocation.framework */; };
 		455328F01A0CEC820025AD71 /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 455328EF1A0CEC820025AD71 /* MapPoint.m */; };
+		455328F31A0D02710025AD71 /* RunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455328F21A0D02710025AD71 /* RunViewController.m */; };
+		455328F61A0D039E0025AD71 /* pari.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 455328F51A0D039E0025AD71 /* pari.jpg */; };
+		455328F81A0D071A0025AD71 /* dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 455328F71A0D071A0025AD71 /* dash.png */; };
 		F5CE4D801A0CED2D006C0FFC /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */; };
 		F5CE4D841A0CFB0F006C0FFC /* MapMission.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D831A0CFB0F006C0FFC /* MapMission.m */; };
 /* End PBXBuildFile section */
@@ -52,6 +55,10 @@
 		455328EB1A0CEBAE0025AD71 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		455328EE1A0CEC820025AD71 /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
 		455328EF1A0CEC820025AD71 /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
+		455328F11A0D02710025AD71 /* RunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunViewController.h; sourceTree = "<group>"; };
+		455328F21A0D02710025AD71 /* RunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunViewController.m; sourceTree = "<group>"; };
+		455328F51A0D039E0025AD71 /* pari.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pari.jpg; sourceTree = "<group>"; };
+		455328F71A0D071A0025AD71 /* dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash.png; sourceTree = "<group>"; };
 		F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
 		F5CE4D811A0CED39006C0FFC /* MapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
 		F5CE4D821A0CFB0F006C0FFC /* MapMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapMission.h; sourceTree = "<group>"; };
@@ -101,6 +108,7 @@
 		455328BF1A0CE9840025AD71 /* uppacker */ = {
 			isa = PBXGroup;
 			children = (
+				455328F41A0D038F0025AD71 /* Img */,
 				455328ED1A0CEC820025AD71 /* Lib */,
 				455328C41A0CE9840025AD71 /* AppDelegate.h */,
 				455328C51A0CE9840025AD71 /* AppDelegate.m */,
@@ -112,6 +120,8 @@
 				455328D01A0CE9840025AD71 /* Images.xcassets */,
 				455328D21A0CE9840025AD71 /* LaunchScreen.xib */,
 				455328C01A0CE9840025AD71 /* Supporting Files */,
+				455328F11A0D02710025AD71 /* RunViewController.h */,
+				455328F21A0D02710025AD71 /* RunViewController.m */,
 			);
 			path = uppacker;
 			sourceTree = "<group>";
@@ -153,6 +163,15 @@
 				F5CE4D831A0CFB0F006C0FFC /* MapMission.m */,
 			);
 			path = Lib;
+			sourceTree = "<group>";
+		};
+		455328F41A0D038F0025AD71 /* Img */ = {
+			isa = PBXGroup;
+			children = (
+				455328F71A0D071A0025AD71 /* dash.png */,
+				455328F51A0D039E0025AD71 /* pari.jpg */,
+			);
+			path = Img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +255,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				455328CF1A0CE9840025AD71 /* Main.storyboard in Resources */,
+				455328F81A0D071A0025AD71 /* dash.png in Resources */,
 				455328D41A0CE9840025AD71 /* LaunchScreen.xib in Resources */,
 				455328D11A0CE9840025AD71 /* Images.xcassets in Resources */,
+				455328F61A0D039E0025AD71 /* pari.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +278,7 @@
 			files = (
 				455328CC1A0CE9840025AD71 /* SecondViewController.m in Sources */,
 				455328C61A0CE9840025AD71 /* AppDelegate.m in Sources */,
+				455328F31A0D02710025AD71 /* RunViewController.m in Sources */,
 				455328C91A0CE9840025AD71 /* FirstViewController.m in Sources */,
 				455328C31A0CE9840025AD71 /* main.m in Sources */,
 				F5CE4D801A0CED2D006C0FFC /* MapManager.m in Sources */,
