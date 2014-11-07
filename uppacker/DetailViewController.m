@@ -22,42 +22,62 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIImage *img_mae;
+    float widthPer = 0.2;  // リサイズ後幅の倍率
+    float heightPer = 0.2;  // リサイズ後高さの倍率
     
 
     if([self.selectCity isEqualToString:@"パリ"]){
         NSLog(@"1");
+        img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
+        widthPer = 0.2;  // リサイズ後幅の倍率
+        heightPer = 0.2;  // リサイズ後高さの倍率
         
     }
     else if([self.selectCity  isEqualToString:@"バルセロナ"]){
         NSLog(@"2");
+        img_mae = [UIImage imageNamed:@"bal_photo.jpg"];  // リサイズ前UIImage
+        widthPer = 0.5;  // リサイズ後幅の倍率
+        heightPer = 0.5;  // リサイズ後高さの倍率
         
     }
     else if([self.selectCity  isEqualToString:@"ミラノ"]){
         NSLog(@"3");
+        img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
+        widthPer = 0.2;  // リサイズ後幅の倍率
+        heightPer = 0.2;  // リサイズ後高さの倍率
         
     }
     else if([self.selectCity  isEqualToString:@"ミュンヘン"]){
         NSLog(@"4");
+        img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
+        widthPer = 0.2;  // リサイズ後幅の倍率
+        heightPer = 0.2;  // リサイズ後高さの倍率
         
     }
     else if([self.selectCity  isEqualToString:@"アムステルダム"]){
         NSLog(@"5");
+        img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
+        widthPer = 0.2;  // リサイズ後幅の倍率
+        heightPer = 0.2;  // リサイズ後高さの倍率
         
     }
     else if([self.selectCity  isEqualToString:@"ローマ"]){
         NSLog(@"6");
+        img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
+        widthPer = 0.2;  // リサイズ後幅の倍率
+        heightPer = 0.2;  // リサイズ後高さの倍率
         
     }
     else{
+        //img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
         NSLog(@"バグ");
     }
         
         
     //画像
-    UIImage *img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
+    //UIImage *img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
     UIImage *img_ato;  // リサイズ後UIImage
-    float widthPer = 0.2;  // リサイズ後幅の倍率
-    float heightPer = 0.2;  // リサイズ後高さの倍率
     CGSize sz = CGSizeMake(img_mae.size.width*widthPer,
                            img_mae.size.height*heightPer);
     UIGraphicsBeginImageContext(sz);
