@@ -23,6 +23,8 @@
 		455328F81A0D071A0025AD71 /* dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 455328F71A0D071A0025AD71 /* dash.png */; };
 		F5CE4D801A0CED2D006C0FFC /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */; };
 		F5CE4D841A0CFB0F006C0FFC /* MapMission.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D831A0CFB0F006C0FFC /* MapMission.m */; };
+		F5CE4D871A0D13C7006C0FFC /* badge_locked.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CE4D851A0D13C7006C0FFC /* badge_locked.png */; };
+		F5CE4D881A0D13C7006C0FFC /* badge_unlocked.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CE4D861A0D13C7006C0FFC /* badge_unlocked.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		F5CE4D811A0CED39006C0FFC /* MapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
 		F5CE4D821A0CFB0F006C0FFC /* MapMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapMission.h; sourceTree = "<group>"; };
 		F5CE4D831A0CFB0F006C0FFC /* MapMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapMission.m; sourceTree = "<group>"; };
+		F5CE4D851A0D13C7006C0FFC /* badge_locked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_locked.png; sourceTree = "<group>"; };
+		F5CE4D861A0D13C7006C0FFC /* badge_unlocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = badge_unlocked.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 		455328F41A0D038F0025AD71 /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				F5CE4D851A0D13C7006C0FFC /* badge_locked.png */,
+				F5CE4D861A0D13C7006C0FFC /* badge_unlocked.png */,
 				455328F71A0D071A0025AD71 /* dash.png */,
 				455328F51A0D039E0025AD71 /* pari.jpg */,
 			);
@@ -254,9 +260,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5CE4D881A0D13C7006C0FFC /* badge_unlocked.png in Resources */,
 				455328CF1A0CE9840025AD71 /* Main.storyboard in Resources */,
 				455328F81A0D071A0025AD71 /* dash.png in Resources */,
 				455328D41A0CE9840025AD71 /* LaunchScreen.xib in Resources */,
+				F5CE4D871A0D13C7006C0FFC /* badge_locked.png in Resources */,
 				455328D11A0CE9840025AD71 /* Images.xcassets in Resources */,
 				455328F61A0D039E0025AD71 /* pari.jpg in Resources */,
 			);

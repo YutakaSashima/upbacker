@@ -60,43 +60,7 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="バッジリスト" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32e-QO-Fqc">
-                                <rect key="frame" x="63" y="46" width="102" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ロンドン到達" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0Q-PA-ZYp">
-                                <rect key="frame" x="93" y="84" width="102" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パリ到達" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjA-pY-jwN">
-                                <rect key="frame" x="93" y="124" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="イタリア到達" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAC-9h-Op0">
-                                <rect key="frame" x="93" y="162" width="102" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="kAC-9h-Op0" firstAttribute="top" secondItem="SjA-pY-jwN" secondAttribute="bottom" constant="17" id="1kh-RI-bOg"/>
-                            <constraint firstItem="SjA-pY-jwN" firstAttribute="leading" secondItem="kAC-9h-Op0" secondAttribute="leading" id="2mP-YN-DuU"/>
-                            <constraint firstItem="k0Q-PA-ZYp" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="77" id="54m-BK-fJx"/>
-                            <constraint firstItem="32e-QO-Fqc" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="26" id="ZSg-4D-GKK"/>
-                            <constraint firstItem="k0Q-PA-ZYp" firstAttribute="top" secondItem="32e-QO-Fqc" secondAttribute="bottom" constant="17" id="doW-V7-hkj"/>
-                            <constraint firstItem="k0Q-PA-ZYp" firstAttribute="leading" secondItem="SjA-pY-jwN" secondAttribute="leading" id="qIS-LK-RlQ"/>
-                            <constraint firstItem="32e-QO-Fqc" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="47" id="tVi-uF-3Zc"/>
-                            <constraint firstItem="SjA-pY-jwN" firstAttribute="top" secondItem="k0Q-PA-ZYp" secondAttribute="bottom" constant="19" id="w6w-gv-k9m"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                 </viewController>
