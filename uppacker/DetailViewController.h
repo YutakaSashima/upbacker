@@ -10,5 +10,8 @@
 
 @interface DetailViewController : UIViewController
 - (IBAction)back:(id)sender;
+-(void) setCity:(NSString*)city;
+//選んだ街名
+@property (strong, nonatomic) NSString *selectCity;
 
 @end

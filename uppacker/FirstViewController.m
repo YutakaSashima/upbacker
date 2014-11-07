@@ -109,38 +109,42 @@ calloutAccessoryControlTapped:(UIControl*)control {
     //詳細ビューにデータを追加する
     //[detailController setPinInfo:self.mymapView annotationView:annotationView viewController:self];
     
+    
+    //StoryBoradの詳細ビューコントローラとってきてモーダルビュー表示を行う
+    DetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailScene"];
+    
     ////選択されたピンIDを保存する。
     MyAnnotation *test;
     test = annotationView.annotation;
     NSLog(@"pinid:%@",test.title);
-    if([test.title isEqualToString:@"パリ"]){
-        NSLog(@"パリ");
+    [detailViewController setCity:test.title];
+
+    /*if([test.title isEqualToString:@"パリ"]){
+        [detailViewController setCity:@"パリ"];
     }
     else if([test.title isEqualToString:@"バルセロナ"]){
-        NSLog(@"バルセロナ");
+        [detailViewController setCity:@"バルセロナ"];
     }
     else if([test.title isEqualToString:@"ミラノ"]){
-        NSLog(@"ミラノ");
+        [detailViewController setCity:@"ミラノ"];
     }
     else if([test.title isEqualToString:@"ミュンヘン"]){
-        NSLog(@"ミュンヘン");
+        [detailViewController setCity:@"ミュンヘン"];
     }
     else if([test.title isEqualToString:@"アムステルダム"]){
-        NSLog(@"アムステルダム");
+        [detailViewController setCity:@"アムステルダム"];
     }
     else if([test.title isEqualToString:@"ローマ"]){
-        NSLog(@"ローマ");
+        [detailViewController setCity:@"ローマ"];
     }
     else{
         NSLog(@"バグ");
-    }
+    }*/
     
     
-    //deletepinID = test.identifier;
     
-    //StoryBoradの詳細ビューコントローラとってきてモーダルビュー表示を行う
-    DetailViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailScene"];
-    [self presentModalViewController:secondViewController animated:YES];
+
+    [self presentModalViewController:detailViewController animated:YES];
 }
 
 //ピンを配置するときに呼び出される処理

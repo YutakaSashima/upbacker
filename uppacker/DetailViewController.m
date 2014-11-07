@@ -23,7 +23,36 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+
+    if([self.selectCity isEqualToString:@"パリ"]){
+        NSLog(@"1");
+        
+    }
+    else if([self.selectCity  isEqualToString:@"バルセロナ"]){
+        NSLog(@"2");
+        
+    }
+    else if([self.selectCity  isEqualToString:@"ミラノ"]){
+        NSLog(@"3");
+        
+    }
+    else if([self.selectCity  isEqualToString:@"ミュンヘン"]){
+        NSLog(@"4");
+        
+    }
+    else if([self.selectCity  isEqualToString:@"アムステルダム"]){
+        NSLog(@"5");
+        
+    }
+    else if([self.selectCity  isEqualToString:@"ローマ"]){
+        NSLog(@"6");
+        
+    }
+    else{
+        NSLog(@"バグ");
+    }
+        
+        
     //画像
     UIImage *img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
     UIImage *img_ato;  // リサイズ後UIImage
@@ -60,4 +89,12 @@
    [ self dismissViewControllerAnimated:YES completion:nil];
 
 }
+
+
+-(void) setCity:(NSString*)city
+{
+    self.selectCity = city;
+}
+
+
 @end
