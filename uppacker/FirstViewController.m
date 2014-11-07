@@ -74,23 +74,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+//ピンを配置する
 - (NSMutableArray *)createAnnotations
 {
-    [[MapManager sharedManager] points];
-    
+    //ピンの位置を取得する
     NSArray* points = [MapManager sharedManager].points;
     
-    
+    //返すデータ置き場
     NSMutableArray *annotations = [[NSMutableArray alloc] init];
-    /*NSNumber *latitude = 12;
-    NSNumber *longitude = [row objectForKey:@"lon"];
-    NSString *title = [row objectForKey:@"title"];
-    */
-     //Create coordinates from the latitude and longitude values
+    
+    //取得データを配列に入れる
     for (int i = 0; i < points.count; i++) {
-        NSLog(@"test");
         MapPoint *temp = points[i];
-        NSLog(@"%d v = %@ lat:%f lon:%f", i, temp.name,temp.latitude,temp.longitude);
+        //NSLog(@"%d v = %@ lat:%f lon:%f", i, temp.name,temp.latitude,temp.longitude);
         
         CLLocationCoordinate2D coord;
         coord.latitude = temp.latitude;
@@ -99,62 +95,51 @@
         [annotations addObject:annotation];
     }
     
-    /*CLLocationCoordinate2D coord;
-    coord.latitude = 48.58;
-    coord.longitude = 2.27;
-    MyAnnotation *annotation = [[MyAnnotation alloc] initWithTitle:@"パリ" AndCoordinate:coord];
-    [annotations addObject:annotation];*/
     
     return annotations;
-
-    
-    /*NSMutableArray *annotations = [[NSMutableArray alloc] init];
-    //Read locations details from plist
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"plist"];
-    NSArray *locations = [NSArray arrayWithContentsOfFile:path];
-    for (NSDictionary *row in locations) {
-        NSNumber *latitude = [row objectForKey:@"lat"];
-        NSNumber *longitude = [row objectForKey:@"lon"];
-        NSString *title = [row objectForKey:@"title"];
-        //Create coordinates from the latitude and longitude values
-        CLLocationCoordinate2D coord;
-        coord.latitude = latitude.doubleValue;
-        coord.longitude = longitude.doubleValue;
-        MyAnnotation *annotation = [[MyAnnotation alloc] initWithTitle:title AndCoordinate:coord];
-        [annotations addObject:annotation];
-    }
-    return annotations;*/
 }
-
-/*- (void) mapView:(MKMapView*)_mapView annotationView:(MKAnnotationView*)annotationView calloutAccessoryControlTapped:(UIControl*)control {
-    // タップしたときの処理
-    // annotationView.annotation でどのアノテーションか判定可能
-    
-    NSLog(@"Test");
-}*/
 
 //ピンがタップされた時の処理
 - (void) mapView:(MKMapView*)_mapView
   annotationView:(MKAnnotationView*)annotationView
 calloutAccessoryControlTapped:(UIControl*)control {
+
     //詳細画面の表示
     //[self DispDetailView];
     //詳細ビューにデータを追加する
     //[detailController setPinInfo:self.mymapView annotationView:annotationView viewController:self];
     
     ////選択されたピンIDを保存する。
-    //SoundPlayPos *test;
-    //test = annotationView.annotation;
-    //NSLog(@"pinid:%@",test.identifier);
+    MyAnnotation *test;
+    test = annotationView.annotation;
+    NSLog(@"pinid:%@",test.title);
+    if([test.title isEqualToString:@"パリ"]){
+        NSLog(@"パリ");
+    }
+    else if([test.title isEqualToString:@"バルセロナ"]){
+        NSLog(@"バルセロナ");
+    }
+    else if([test.title isEqualToString:@"ミラノ"]){
+        NSLog(@"ミラノ");
+    }
+    else if([test.title isEqualToString:@"ミュンヘン"]){
+        NSLog(@"ミュンヘン");
+    }
+    else if([test.title isEqualToString:@"アムステルダム"]){
+        NSLog(@"アムステルダム");
+    }
+    else if([test.title isEqualToString:@"ローマ"]){
+        NSLog(@"ローマ");
+    }
+    else{
+        NSLog(@"バグ");
+    }
+    
+    
     //deletepinID = test.identifier;
     
-    NSLog(@"Test");
-    
-    //[self performSegueWithIdentifier:@"presentDetailView" sender:self];
-    
-    // FirstScene と SecondScene が同じ Storyboard にある場合
+    //StoryBoradの詳細ビューコントローラとってきてモーダルビュー表示を行う
     DetailViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailScene"];
-    
     [self presentModalViewController:secondViewController animated:YES];
 }
 

@@ -123,6 +123,7 @@
 }
 */
 
+//ダッシュボタン
 - (IBAction)dash:(id)sender {
     [[MapManager sharedManager] addMoveDistance:100000];
     NSLog(@"walkcnt:%d :%lf",[MapManager sharedManager].walkCount,[MapManager sharedManager].ratio);
