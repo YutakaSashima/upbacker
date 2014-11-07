@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MapManager.h"
+#import "MapMission.h"
 
 @implementation MapManager
 
@@ -26,14 +27,31 @@ static MapManager *sharedData_ = nil;
   if (self) {
     //Initialization
     
+    // 都市の初期化
     self.points = [NSMutableArray array];
-    [self.points addObject:[[MapPoint alloc] initWithName:@"Tokyo" latitude:0.0 longitude:0.0]];
-    [self.points addObject:[[MapPoint alloc] initWithName:@"London" latitude:1.0 longitude:1.0]];
-    [self.points addObject:[[MapPoint alloc] initWithName:@"Paris" latitude:2.0 longitude:2.0]];
-    [self.points addObject:[[MapPoint alloc] initWithName:@"Hong-Kong" latitude:3.0 longitude:3.0]];
-    [self.points addObject:[[MapPoint alloc] initWithName:@"Moscow" latitude:4.0 longitude:4.0]];
+    MapPoint* pt1 = [[MapPoint alloc] initWithName:@"City 1" latitude:36.0 longitude:115.0];
+    MapPoint* pt2 = [[MapPoint alloc] initWithName:@"City 2" latitude:51.0 longitude:0.0];
+    MapPoint* pt3 = [[MapPoint alloc] initWithName:@"City 3" latitude:41.0 longitude:12.0];
+    MapPoint* pt4 = [[MapPoint alloc] initWithName:@"City 4" latitude:41.0 longitude:2.0];
+    MapPoint* pt5 = [[MapPoint alloc] initWithName:@"City 5" latitude:55.0 longitude:37.0];
+    [self.points addObject:pt1];
+    [self.points addObject:pt2];
+    [self.points addObject:pt3];
+    [self.points addObject:pt4];
+    [self.points addObject:pt5];
+    
+    // ミッションの初期化
+    self.missions = [NSMutableArray array];
+    MapMission* m1 = [[MapMission alloc] initWithName:@"Mission Name 1" points:[NSArray arrayWithObjects:pt1, pt2, pt3, nil]];
+    MapMission* m2 = [[MapMission alloc] initWithName:@"Mission Name 2" points:[NSArray arrayWithObjects:pt1, pt2, pt3, nil]];
+    MapMission* m3 = [[MapMission alloc] initWithName:@"Mission Name 3" points:[NSArray arrayWithObjects:pt1, pt2, pt3, nil]];
+    [self.missions addObject:m1];
+    [self.missions addObject:m2];
+    [self.missions addObject:m3];
     
     self.visitPoints = [NSMutableArray array];
+    
+    self.clearMissions = [NSMutableArray array];
     
     self.totalMoveDistanceInApp = 0.0;
     self.totalMoveDistanceInReal = 0.0;
@@ -45,15 +63,15 @@ static MapManager *sharedData_ = nil;
 }
 
 -(void)setStartPoint:(MapPoint *)point {
-  self.startPoint = point;
-  self.currentLatitude = point.latitude;
-  self.currentLongitude = point.longitude;
-  self.totalMoveDistanceInApp = 0.0;
-  self.totalMoveDistanceInApp = 0.0;
+  _startPoint = point;
+  _currentLatitude = point.latitude;
+  _currentLongitude = point.longitude;
+  _totalMoveDistanceInApp = 0.0;
+  _totalMoveDistanceInApp = 0.0;
 }
 
 -(void)setGoalPoint:(MapPoint *)point {
-  self.goalPoint = point;
+  _goalPoint = point;
 }
 
 -(void)addMoveDistance:(int)dist {
@@ -61,30 +79,34 @@ static MapManager *sharedData_ = nil;
   // 1歩 = 70m換算
   double meter = dist * 70.0;
   
-  self.totalMoveDistanceInReal += meter;
-  self.totalMoveDistanceInApp += meter * 100; // TODO とりあえずApp内では100倍しとく
+  _totalMoveDistanceInReal += meter;
+  _totalMoveDistanceInApp += meter * 100; // TODO とりあえずApp内では100倍しとく
   
   // start-goal間距離
   double totalDistMeter = [self.startPoint getDistanceMapPoint:self.goalPoint];
   
   // どれだけ進んだか（0.0...1.0）
-  double ratio = self.totalMoveDistanceInApp / totalDistMeter;
+  double ratio = _totalMoveDistanceInApp / totalDistMeter;
   if (ratio > 1.0) {
     ratio = 1.0;
     
     // 訪問達成！
-    if ([self.visitPoints containsObject:self.goalPoint]) {
+    if ([_visitPoints containsObject:_goalPoint]) {
       // 過去に訪問済み
     } else {
-      [self.visitPoints addObject:self.goalPoint];
+      [_visitPoints addObject:_goalPoint];
+      
+      // ミッション達成チェック
+      
+      
     }
     
   } else if (ratio < 0.0) {
     ratio = 0.0;
   }
   
-  self.currentLatitude = self.startPoint.latitude + (self.goalPoint.latitude - self.startPoint.latitude) * ratio;
-  self.currentLongitude = self.startPoint.longitude + (self.goalPoint.longitude - self.startPoint.longitude) * ratio;
+  _currentLatitude = _startPoint.latitude + (_goalPoint.latitude - _startPoint.latitude) * ratio;
+  _currentLongitude = _startPoint.longitude + (_goalPoint.longitude - _startPoint.longitude) * ratio;
 }
 
 @end

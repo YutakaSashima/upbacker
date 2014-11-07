@@ -14,9 +14,9 @@
 @property (nonatomic, strong) NSString *name;
 
 // このミッションに必要な都市のリスト
-@property (nonatomic) NSMutableArray *points;
+@property (nonatomic, strong) NSArray *points;
 
 //初期化
-- (id)initWithName : (NSString *)name points:(NSMutableArray*)points;
+- (id)initWithName:(NSString *)name points:(NSArray*)points;
 
 @end

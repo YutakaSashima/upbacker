@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
+#import "MapManager.h"
+
 @interface uppackerTests : XCTestCase
 
 @end
@@ -35,6 +37,19 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+- (void)testMapManager {
+  
+  NSArray* points = [MapManager sharedManager].points;
+  NSLog(@"city count = %d", (int)[points count]);
+  
+  [[MapManager sharedManager] setStartPoint:[points objectAtIndex:0]];
+  [[MapManager sharedManager] setGoalPoint:[points objectAtIndex:1]];
+  NSLog(@"lat=%f, lon=%f", [MapManager sharedManager].currentLatitude, [MapManager sharedManager].currentLongitude);
+  
+  [[MapManager sharedManager] addMoveDistance:100];
+  NSLog(@"lat=%f, lon=%f", [MapManager sharedManager].currentLatitude, [MapManager sharedManager].currentLongitude);
 }
 
 @end
