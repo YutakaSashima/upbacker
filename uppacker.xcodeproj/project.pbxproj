@@ -27,6 +27,13 @@
 		455329031A0D458F0025AD71 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455329021A0D458F0025AD71 /* DetailViewController.m */; };
 		455329051A0D4A7B0025AD71 /* roma_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 455329041A0D4A7B0025AD71 /* roma_photo.jpg */; };
 		455329071A0D73DD0025AD71 /* bal_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 455329061A0D73DD0025AD71 /* bal_photo.jpg */; };
+		455329091A0D7BF50025AD71 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455329081A0D7BF50025AD71 /* QuartzCore.framework */; };
+		4553290B1A0D7C000025AD71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4553290A1A0D7C000025AD71 /* UIKit.framework */; };
+		4553290D1A0D7C080025AD71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4553290C1A0D7C080025AD71 /* Foundation.framework */; };
+		4553290F1A0D7C0E0025AD71 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4553290E1A0D7C0E0025AD71 /* CoreGraphics.framework */; };
+		455329191A0D7DB10025AD71 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 455329111A0D7DB10025AD71 /* .gitkeep */; };
+		4553291A1A0D7DB10025AD71 /* ASOBounceButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 455329141A0D7DB10025AD71 /* ASOBounceButtonView.m */; };
+		4553291B1A0D7DB10025AD71 /* ASOTwoStateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 455329181A0D7DB10025AD71 /* ASOTwoStateButton.m */; };
 		F5CE4D801A0CED2D006C0FFC /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */; };
 		F5CE4D841A0CFB0F006C0FFC /* MapMission.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D831A0CFB0F006C0FFC /* MapMission.m */; };
 		F5CE4D871A0D13C7006C0FFC /* badge_locked.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CE4D851A0D13C7006C0FFC /* badge_locked.png */; };
@@ -75,6 +82,16 @@
 		455329021A0D458F0025AD71 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		455329041A0D4A7B0025AD71 /* roma_photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = roma_photo.jpg; sourceTree = "<group>"; };
 		455329061A0D73DD0025AD71 /* bal_photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bal_photo.jpg; sourceTree = "<group>"; };
+		455329081A0D7BF50025AD71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4553290A1A0D7C000025AD71 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4553290C1A0D7C080025AD71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4553290E1A0D7C0E0025AD71 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		455329111A0D7DB10025AD71 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		455329131A0D7DB10025AD71 /* ASOBounceButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASOBounceButtonView.h; sourceTree = "<group>"; };
+		455329141A0D7DB10025AD71 /* ASOBounceButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASOBounceButtonView.m; sourceTree = "<group>"; };
+		455329151A0D7DB10025AD71 /* ASOBounceButtonViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASOBounceButtonViewDelegate.h; sourceTree = "<group>"; };
+		455329171A0D7DB10025AD71 /* ASOTwoStateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASOTwoStateButton.h; sourceTree = "<group>"; };
+		455329181A0D7DB10025AD71 /* ASOTwoStateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASOTwoStateButton.m; sourceTree = "<group>"; };
 		F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
 		F5CE4D811A0CED39006C0FFC /* MapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
 		F5CE4D821A0CFB0F006C0FFC /* MapMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapMission.h; sourceTree = "<group>"; };
@@ -88,6 +105,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4553290F1A0D7C0E0025AD71 /* CoreGraphics.framework in Frameworks */,
+				4553290D1A0D7C080025AD71 /* Foundation.framework in Frameworks */,
+				4553290B1A0D7C000025AD71 /* UIKit.framework in Frameworks */,
+				455329091A0D7BF50025AD71 /* QuartzCore.framework in Frameworks */,
 				455328EC1A0CEBAE0025AD71 /* CoreLocation.framework in Frameworks */,
 				455328EA1A0CEBA70025AD71 /* MapKit.framework in Frameworks */,
 			);
@@ -106,6 +127,10 @@
 		455328B41A0CE9840025AD71 = {
 			isa = PBXGroup;
 			children = (
+				4553290E1A0D7C0E0025AD71 /* CoreGraphics.framework */,
+				4553290C1A0D7C080025AD71 /* Foundation.framework */,
+				4553290A1A0D7C000025AD71 /* UIKit.framework */,
+				455329081A0D7BF50025AD71 /* QuartzCore.framework */,
 				455328EB1A0CEBAE0025AD71 /* CoreLocation.framework */,
 				455328E91A0CEBA70025AD71 /* MapKit.framework */,
 				455328BF1A0CE9840025AD71 /* uppacker */,
@@ -203,11 +228,41 @@
 		455328F91A0D132E0025AD71 /* MapViewLib */ = {
 			isa = PBXGroup;
 			children = (
+				455329101A0D7DB10025AD71 /* ios */,
 				455328FA1A0D13670025AD71 /* MyAnnotation.h */,
 				455328FB1A0D13670025AD71 /* MyAnnotation.m */,
 				455328FD1A0D15E50025AD71 /* location.plist */,
 			);
 			path = MapViewLib;
+			sourceTree = "<group>";
+		};
+		455329101A0D7DB10025AD71 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				455329111A0D7DB10025AD71 /* .gitkeep */,
+				455329121A0D7DB10025AD71 /* BounceButton */,
+				455329161A0D7DB10025AD71 /* TwoStateButton */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		455329121A0D7DB10025AD71 /* BounceButton */ = {
+			isa = PBXGroup;
+			children = (
+				455329131A0D7DB10025AD71 /* ASOBounceButtonView.h */,
+				455329141A0D7DB10025AD71 /* ASOBounceButtonView.m */,
+				455329151A0D7DB10025AD71 /* ASOBounceButtonViewDelegate.h */,
+			);
+			path = BounceButton;
+			sourceTree = "<group>";
+		};
+		455329161A0D7DB10025AD71 /* TwoStateButton */ = {
+			isa = PBXGroup;
+			children = (
+				455329171A0D7DB10025AD71 /* ASOTwoStateButton.h */,
+				455329181A0D7DB10025AD71 /* ASOTwoStateButton.m */,
+			);
+			path = TwoStateButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +348,7 @@
 				F5CE4D881A0D13C7006C0FFC /* badge_unlocked.png in Resources */,
 				455328CF1A0CE9840025AD71 /* Main.storyboard in Resources */,
 				455329001A0D3E8B0025AD71 /* roma.png in Resources */,
+				455329191A0D7DB10025AD71 /* .gitkeep in Resources */,
 				455329051A0D4A7B0025AD71 /* roma_photo.jpg in Resources */,
 				455328F81A0D071A0025AD71 /* dash.png in Resources */,
 				455328D41A0CE9840025AD71 /* LaunchScreen.xib in Resources */,
@@ -318,7 +374,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4553291B1A0D7DB10025AD71 /* ASOTwoStateButton.m in Sources */,
 				455328CC1A0CE9840025AD71 /* SecondViewController.m in Sources */,
+				4553291A1A0D7DB10025AD71 /* ASOBounceButtonView.m in Sources */,
 				455328C61A0CE9840025AD71 /* AppDelegate.m in Sources */,
 				455328F31A0D02710025AD71 /* RunViewController.m in Sources */,
 				455328C91A0CE9840025AD71 /* FirstViewController.m in Sources */,
