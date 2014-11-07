@@ -20,29 +20,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // マップにユーザの現在地を表示
-    self.map.showsUserLocation = YES;
+    //self.map.showsUserLocation = YES;
     // マップの中心地がユーザの現在地を追従するように設定
-    [self.map setUserTrackingMode:MKUserTrackingModeFollow];
+    //[self.map setUserTrackingMode:MKUserTrackingModeFollow];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //self.map addAnnotation;
+    //自分でメッセージ受けるように設定
+    [self.map setDelegate:self];
     
-    //NSArray* locations = ;
     
-    /*for (Location* location in locations) {
-        CLLocationCoordinate2D coordinate =
-        CLLocationCoordinate2DMake(location.latitude, location.longitude);
-        CustomAnnotation* pin =
-        [[CustomAnnotation alloc] initWithLocationCoordinate:coordinate
-                                                       title:location.title
-                                                    subtitle:location.subtitle];
-        
-        [self.map addAnnotation:pin];
-    }*/
     
-    //[self.map addAnnotation];
-    //[self createAnnotations];
+    CLLocationCoordinate2D co;
+    co.latitude = 41.48; // 経度
+    co.longitude = 12.14; // 緯度
+    [self.map setCenterCoordinate:co animated:YES];
     [self.map addAnnotations:[self createAnnotations]];
+    
+    // 縮尺を指定
+    MKCoordinateRegion cr = self.map.region;
+    cr.center = co;
+    cr.span.latitudeDelta = 50;
+    cr.span.longitudeDelta = 50;
+    [self.map setRegion:cr animated:NO];
+    
+    self.map.showsUserLocation = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -100,6 +101,58 @@
         [annotations addObject:annotation];
     }
     return annotations;*/
+}
+
+/*- (void) mapView:(MKMapView*)_mapView annotationView:(MKAnnotationView*)annotationView calloutAccessoryControlTapped:(UIControl*)control {
+    // タップしたときの処理
+    // annotationView.annotation でどのアノテーションか判定可能
+    
+    NSLog(@"Test");
+}*/
+
+//ピンがタップされた時の処理
+- (void) mapView:(MKMapView*)_mapView
+  annotationView:(MKAnnotationView*)annotationView
+calloutAccessoryControlTapped:(UIControl*)control {
+    //詳細画面の表示
+    //[self DispDetailView];
+    //詳細ビューにデータを追加する
+    //[detailController setPinInfo:self.mymapView annotationView:annotationView viewController:self];
+    
+    ////選択されたピンIDを保存する。
+    //SoundPlayPos *test;
+    //test = annotationView.annotation;
+    //NSLog(@"pinid:%@",test.identifier);
+    //deletepinID = test.identifier;
+    
+    NSLog(@"Test");
+    
+    //[self performSegueWithIdentifier:@"presentDetailView" sender:self];
+}
+
+//ピンを配置するときに呼び出される処理
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    
+    MKPinAnnotationView *pinView = (MKPinAnnotationView *)
+    [mapView dequeueReusableAnnotationViewWithIdentifier:@"pin"];
+    if(pinView == nil){
+        pinView = [[MKPinAnnotationView alloc]
+                    initWithAnnotation:annotation reuseIdentifier:@"pin"];
+    }
+    
+    //配置するピンの設定
+    pinView.pinColor = MKPinAnnotationColorGreen;
+    pinView.animatesDrop = YES;
+    pinView.canShowCallout = YES;
+    pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    pinView.annotation = annotation;
+    
+    
+    
+    
+    return pinView;
+    
 }
 
 @end
