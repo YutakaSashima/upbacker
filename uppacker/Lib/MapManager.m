@@ -60,6 +60,9 @@ static MapManager *sharedData_ = nil;
     
     self.currentLatitude = 0.0;
     self.currentLongitude = 0.0;
+    
+    self.walkCount = 0;
+    self.ratio = 0.0;
   }
   return self;
 }
@@ -70,6 +73,8 @@ static MapManager *sharedData_ = nil;
   _currentLongitude = point.longitude;
   _totalMoveDistanceInApp = 0.0;
   _totalMoveDistanceInApp = 0.0;
+  _walkCount = 0;
+  _ratio = 0.0;
   
   // スタート地点を訪問済みとする
   if (![_visitPoints containsObject:point]) {
@@ -83,6 +88,8 @@ static MapManager *sharedData_ = nil;
 
 -(void)addMoveDistance:(int)dist {
   
+  _walkCount += dist;
+  
   // 1歩 = 70m換算
   double meter = dist * 70.0;
   
@@ -93,9 +100,9 @@ static MapManager *sharedData_ = nil;
   double totalDistMeter = [_startPoint getDistanceMapPoint:_goalPoint];
   
   // どれだけ進んだか（0.0...1.0）
-  double ratio = _totalMoveDistanceInApp / totalDistMeter;
-  if (ratio > 1.0) {
-    ratio = 1.0;
+  _ratio = _totalMoveDistanceInApp / totalDistMeter;
+  if (_ratio > 1.0) {
+    _ratio = 1.0;
     
     // 訪問達成！
     if ([_visitPoints containsObject:_goalPoint]) {
@@ -129,12 +136,12 @@ static MapManager *sharedData_ = nil;
       
     }
     
-  } else if (ratio < 0.0) {
-    ratio = 0.0;
+  } else if (_ratio < 0.0) {
+    _ratio = 0.0;
   }
   
-  _currentLatitude = _startPoint.latitude + (_goalPoint.latitude - _startPoint.latitude) * ratio;
-  _currentLongitude = _startPoint.longitude + (_goalPoint.longitude - _startPoint.longitude) * ratio;
+  _currentLatitude = _startPoint.latitude + (_goalPoint.latitude - _startPoint.latitude) * _ratio;
+  _currentLongitude = _startPoint.longitude + (_goalPoint.longitude - _startPoint.longitude) * _ratio;
 }
 
 @end

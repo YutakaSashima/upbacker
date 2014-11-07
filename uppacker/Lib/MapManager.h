@@ -41,6 +41,12 @@
 @property double currentLatitude;
 @property double currentLongitude;
 
+// 歩数
+@property int walkCount;
+
+// 目的地まで何割進んだか。0.0〜1.0で返します。
+@property double ratio;
+
 + (MapManager *)sharedManager;
 
 /**
