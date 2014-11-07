@@ -43,8 +43,8 @@ static MapManager *sharedData_ = nil;
     // ミッションの初期化
     self.missions = [NSMutableArray array];
     MapMission* m1 = [[MapMission alloc] initWithName:@"Mission Name 1" points:[NSArray arrayWithObjects:pt1, pt2, pt3, nil]];
-    MapMission* m2 = [[MapMission alloc] initWithName:@"Mission Name 2" points:[NSArray arrayWithObjects:pt1, pt2, pt3, nil]];
-    MapMission* m3 = [[MapMission alloc] initWithName:@"Mission Name 3" points:[NSArray arrayWithObjects:pt1, pt2, pt3, nil]];
+    MapMission* m2 = [[MapMission alloc] initWithName:@"Mission Name 2" points:[NSArray arrayWithObjects:pt1, pt2, pt4, nil]];
+    MapMission* m3 = [[MapMission alloc] initWithName:@"Mission Name 3" points:[NSArray arrayWithObjects:pt1, pt2, pt5, nil]];
     [self.missions addObject:m1];
     [self.missions addObject:m2];
     [self.missions addObject:m3];
@@ -68,6 +68,11 @@ static MapManager *sharedData_ = nil;
   _currentLongitude = point.longitude;
   _totalMoveDistanceInApp = 0.0;
   _totalMoveDistanceInApp = 0.0;
+  
+  // スタート地点を訪問済みとする
+  if (![_visitPoints containsObject:point]) {
+    [_visitPoints addObject:point];
+  }
 }
 
 -(void)setGoalPoint:(MapPoint *)point {
@@ -83,7 +88,7 @@ static MapManager *sharedData_ = nil;
   _totalMoveDistanceInApp += meter * 100; // TODO とりあえずApp内では100倍しとく
   
   // start-goal間距離
-  double totalDistMeter = [self.startPoint getDistanceMapPoint:self.goalPoint];
+  double totalDistMeter = [_startPoint getDistanceMapPoint:_goalPoint];
   
   // どれだけ進んだか（0.0...1.0）
   double ratio = _totalMoveDistanceInApp / totalDistMeter;
@@ -97,7 +102,28 @@ static MapManager *sharedData_ = nil;
       [_visitPoints addObject:_goalPoint];
       
       // ミッション達成チェック
-      
+      for (int i=0; i<[_missions count]; i++) {
+        MapMission* mission = [_missions objectAtIndex:i];
+        if ([_clearMissions containsObject:mission]) {
+          // すでにクリア済みです
+        } else {
+          
+          // ミッションに含む全ての都市を訪問したかチェック
+          BOOL allVisit = YES;
+          for (int j=0; j<[mission.points count]; j++) {
+            MapPoint* pt = [mission.points objectAtIndex:j];
+            if (![_visitPoints containsObject:pt]) {
+              allVisit = NO;
+              break;
+            }
+          }
+          
+          // 達成
+          if (allVisit) {
+            [_clearMissions addObject:mission];
+          }
+        }
+      }
       
     }
     
