@@ -10,7 +10,7 @@
 
 @implementation MapMission
 
--(id)initWithName:(NSString *)name points:(NSMutableArray *)points {
+-(id)initWithName:(NSString *)name points:(NSArray *)points {
   self = [super init];
   if (self != nil) {
     self.name = name;

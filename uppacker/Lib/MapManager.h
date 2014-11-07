@@ -18,15 +18,21 @@
 @interface MapManager : NSObject
 
 // アプリ内に存在する都市のリスト
-@property (nonatomic) NSMutableArray* points;
+@property (nonatomic, strong) NSMutableArray* points;
+
+// アプリ内に存在するミッションのリスト
+@property (nonatomic, strong) NSMutableArray* missions;
 
 // 訪問したことのある都市のリスト
-@property (nonatomic) NSMutableArray* visitPoints;
+@property (nonatomic, strong) NSMutableArray* visitPoints;
+
+// 達成したミッションのリスト
+@property (nonatomic, strong) NSMutableArray* clearMissions;
 
 // スタート都市
-@property MapPoint* startPoint;
+@property (nonatomic, strong) MapPoint* startPoint;
 // ゴール都市
-@property MapPoint* goalPoint;
+@property (nonatomic, strong) MapPoint* goalPoint;
 // 移動距離（実世界）[m]
 @property double totalMoveDistanceInReal;
 // 移動距離（アプリ内世界）[m]
