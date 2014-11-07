@@ -29,22 +29,24 @@ static MapManager *sharedData_ = nil;
     
     // 都市の初期化
     self.points = [NSMutableArray array];
-    MapPoint* pt1 = [[MapPoint alloc] initWithName:@"City 1" latitude:36.0 longitude:115.0];
-    MapPoint* pt2 = [[MapPoint alloc] initWithName:@"City 2" latitude:51.0 longitude:0.0];
-    MapPoint* pt3 = [[MapPoint alloc] initWithName:@"City 3" latitude:41.0 longitude:12.0];
-    MapPoint* pt4 = [[MapPoint alloc] initWithName:@"City 4" latitude:41.0 longitude:2.0];
-    MapPoint* pt5 = [[MapPoint alloc] initWithName:@"City 5" latitude:55.0 longitude:37.0];
+    MapPoint* pt1 = [[MapPoint alloc] initWithName:@"パリ" latitude:48.58 longitude:2.27];
+    MapPoint* pt2 = [[MapPoint alloc] initWithName:@"バルセロナ" latitude:41.25 longitude:2.08];
+    MapPoint* pt3 = [[MapPoint alloc] initWithName:@"ミラノ" latitude:45.28 longitude:9.12];
+    MapPoint* pt4 = [[MapPoint alloc] initWithName:@"ミュンヘン" latitude:48.08 longitude:11.42];
+    MapPoint* pt5 = [[MapPoint alloc] initWithName:@"アムステルダム" latitude:52.21 longitude:4.54];
+    MapPoint* pt6 = [[MapPoint alloc] initWithName:@"ローマ" latitude:41.48 longitude:12.14];
     [self.points addObject:pt1];
     [self.points addObject:pt2];
     [self.points addObject:pt3];
     [self.points addObject:pt4];
     [self.points addObject:pt5];
+    [self.points addObject:pt6];
     
     // ミッションの初期化
     self.missions = [NSMutableArray array];
-    MapMission* m1 = [[MapMission alloc] initWithName:@"Mission Name 1" points:[NSArray arrayWithObjects:pt1, pt2, pt3, nil]];
-    MapMission* m2 = [[MapMission alloc] initWithName:@"Mission Name 2" points:[NSArray arrayWithObjects:pt1, pt2, pt4, nil]];
-    MapMission* m3 = [[MapMission alloc] initWithName:@"Mission Name 3" points:[NSArray arrayWithObjects:pt1, pt2, pt5, nil]];
+    MapMission* m1 = [[MapMission alloc] initWithName:@"イタリア制覇" points:[NSArray arrayWithObjects:pt6, pt3, nil]];
+    MapMission* m2 = [[MapMission alloc] initWithName:@"5か国制覇" points:[NSArray arrayWithObjects:pt1, pt2, pt3, pt4, pt5, nil]];
+    MapMission* m3 = [[MapMission alloc] initWithName:@"ヨーロッパ全都市制覇" points:[NSArray arrayWithObjects:pt1, pt2, pt3, pt4, pt5, pt6, nil]];
     [self.missions addObject:m1];
     [self.missions addObject:m2];
     [self.missions addObject:m3];
