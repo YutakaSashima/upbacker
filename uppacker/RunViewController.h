@@ -16,4 +16,7 @@
 
 - (IBAction)dash:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *goaldist;
+
+@property (strong,nonatomic) UIImageView *playerImgView;
+
 @end
