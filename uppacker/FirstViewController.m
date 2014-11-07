@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // マップにユーザの現在地を表示
+    self.map.showsUserLocation = YES;
+    // マップの中心地がユーザの現在地を追従するように設定
+    [self.map setUserTrackingMode:MKUserTrackingModeFollow];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
