@@ -38,7 +38,7 @@
     
     [super viewDidLoad];
     // マップにユーザの現在地を表示
-    //self.map.showsUserLocation = YES;
+    self.map.showsUserLocation = YES;
     // マップの中心地がユーザの現在地を追従するように設定
     //[self.map setUserTrackingMode:MKUserTrackingModeFollow];
     // Do any additional setup after loading the view, typically from a nib.
@@ -46,8 +46,7 @@
     //自分でメッセージ受けるように設定
     [self.map setDelegate:self];
     
-    
-    
+    //初期の配置
     CLLocationCoordinate2D co;
     co.latitude = 41.48; // 経度
     co.longitude = 12.14; // 緯度
@@ -62,6 +61,12 @@
     [self.map setRegion:cr animated:NO];
     
     self.map.showsUserLocation = YES;
+    
+    
+    NSArray* points = [MapManager sharedManager].points;
+    [[MapManager sharedManager] setStartPoint:[points objectAtIndex:0]];
+    [[MapManager sharedManager] setGoalPoint:[points objectAtIndex:1]];
+    
 }
 
 - (void)didReceiveMemoryWarning {

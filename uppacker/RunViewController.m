@@ -7,6 +7,7 @@
 //
 
 #import "RunViewController.h"
+#import "MapManager.h"
 
 @interface RunViewController ()
 
@@ -61,6 +62,7 @@
     [self.view addSubview:imageView2];
     
     
+    self.goaldist.text = @"残り100歩";
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -121,4 +123,9 @@
 }
 */
 
+- (IBAction)dash:(id)sender {
+    [[MapManager sharedManager] addMoveDistance:100000];
+    NSLog(@"walkcnt:%d :%lf",[MapManager sharedManager].walkCount,[MapManager sharedManager].ratio);
+    self.goaldist.text = @"残り100歩";    
+}
 @end

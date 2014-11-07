@@ -90,17 +90,24 @@ static MapManager *sharedData_ = nil;
   
   _walkCount += dist;
   
-  // 1歩 = 70m換算
-  double meter = dist * 70.0;
+  //1歩 = 70cm
+  double meter = dist * 0.7;
   
   _totalMoveDistanceInReal += meter;
-  _totalMoveDistanceInApp += meter * 100; // TODO とりあえずApp内では100倍しとく
+  _totalMoveDistanceInApp += meter; //実際の距離
+  //_totalMoveDistanceInApp += meter*10; // TODO とりあえずApp内では10倍しとく
   
   // start-goal間距離
   double totalDistMeter = [_startPoint getDistanceMapPoint:_goalPoint];
+
+  //残り距離(m)
+  double remainMeter =  (totalDistMeter - _totalMoveDistanceInApp);
+  //残り歩数
+  double remainStep = remainMeter / 0.7;
   
   // どれだけ進んだか（0.0...1.0）
   _ratio = _totalMoveDistanceInApp / totalDistMeter;
+  NSLog(@"m:%f step:%f rate:%f",remainMeter,remainStep,_ratio);
   if (_ratio > 1.0) {
     _ratio = 1.0;
     
