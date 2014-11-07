@@ -14,9 +14,31 @@
 
 @implementation DetailViewController
 
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    //画像
+    UIImage *img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
+    UIImage *img_ato;  // リサイズ後UIImage
+    float widthPer = 0.2;  // リサイズ後幅の倍率
+    float heightPer = 0.2;  // リサイズ後高さの倍率
+    CGSize sz = CGSizeMake(img_mae.size.width*widthPer,
+                           img_mae.size.height*heightPer);
+    UIGraphicsBeginImageContext(sz);
+    [img_mae drawInRect:CGRectMake(0, 0, sz.width, sz.height)];
+    img_ato = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:img_ato];
+    imageView.center = CGPointMake(150, 100);
+    [self.view addSubview:imageView];
+    
 }
 
 - (void)didReceiveMemoryWarning {

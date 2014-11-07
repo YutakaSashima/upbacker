@@ -18,6 +18,11 @@
 
 @implementation FirstViewController
 
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // マップにユーザの現在地を表示

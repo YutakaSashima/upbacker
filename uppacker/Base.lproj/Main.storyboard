@@ -25,19 +25,11 @@
                                     <constraint firstAttribute="width" constant="476" id="mgi-R7-SQa"/>
                                 </constraints>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOJ-fm-fnt">
-                                <rect key="frame" x="263" y="457" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0hl-Ly-63v" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="27" id="QAf-WX-HSF"/>
-                            <constraint firstItem="NOJ-fm-fnt" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="263" id="R3k-ur-axP"/>
                             <constraint firstItem="0hl-Ly-63v" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="V1p-cB-TgD"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="NOJ-fm-fnt" secondAttribute="bottom" constant="64" id="bgj-Q7-o5H"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
@@ -177,17 +169,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFR-0T-ixp">
+                                <rect key="frame" x="147" y="348" width="117" height="30"/>
+                                <state key="normal" title="目的地にする">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hao-ZU-0Mm">
-                                <rect key="frame" x="35" y="35" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="38" y="348" width="30" height="30"/>
+                                <state key="normal" title="戻る">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="back:" destination="Fgz-Hn-wiQ" eventType="touchUpInside" id="Ujf-0C-mB7"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ro-9M-y8h">
+                                <rect key="frame" x="38" y="218" width="240" height="106"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">ローマは、イタリアの首都。欧州有数の世界都市であり、ラツィオ州の州都、ローマ県のコムーネの一つで、ローマ県の県都でもある。英語とフランス語の表記は「Rome」。 
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0ro-9M-y8h" firstAttribute="leading" secondItem="TBe-T4-Ent" secondAttribute="leading" constant="25" id="0Rv-Vp-wIL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUC-KC-hTt" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -25,6 +25,7 @@
 		455328FE1A0D15E50025AD71 /* location.plist in Resources */ = {isa = PBXBuildFile; fileRef = 455328FD1A0D15E50025AD71 /* location.plist */; };
 		455329001A0D3E8B0025AD71 /* roma.png in Resources */ = {isa = PBXBuildFile; fileRef = 455328FF1A0D3E8B0025AD71 /* roma.png */; };
 		455329031A0D458F0025AD71 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455329021A0D458F0025AD71 /* DetailViewController.m */; };
+		455329051A0D4A7B0025AD71 /* roma_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 455329041A0D4A7B0025AD71 /* roma_photo.jpg */; };
 		F5CE4D801A0CED2D006C0FFC /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */; };
 		F5CE4D841A0CFB0F006C0FFC /* MapMission.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D831A0CFB0F006C0FFC /* MapMission.m */; };
 		F5CE4D871A0D13C7006C0FFC /* badge_locked.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CE4D851A0D13C7006C0FFC /* badge_locked.png */; };
@@ -71,6 +72,7 @@
 		455328FF1A0D3E8B0025AD71 /* roma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roma.png; sourceTree = "<group>"; };
 		455329011A0D458F0025AD71 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		455329021A0D458F0025AD71 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		455329041A0D4A7B0025AD71 /* roma_photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = roma_photo.jpg; sourceTree = "<group>"; };
 		F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
 		F5CE4D811A0CED39006C0FFC /* MapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
 		F5CE4D821A0CFB0F006C0FFC /* MapMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapMission.h; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		455328F41A0D038F0025AD71 /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				455329041A0D4A7B0025AD71 /* roma_photo.jpg */,
 				455328FF1A0D3E8B0025AD71 /* roma.png */,
 				F5CE4D851A0D13C7006C0FFC /* badge_locked.png */,
 				F5CE4D861A0D13C7006C0FFC /* badge_unlocked.png */,
@@ -287,6 +290,7 @@
 				F5CE4D881A0D13C7006C0FFC /* badge_unlocked.png in Resources */,
 				455328CF1A0CE9840025AD71 /* Main.storyboard in Resources */,
 				455329001A0D3E8B0025AD71 /* roma.png in Resources */,
+				455329051A0D4A7B0025AD71 /* roma_photo.jpg in Resources */,
 				455328F81A0D071A0025AD71 /* dash.png in Resources */,
 				455328D41A0CE9840025AD71 /* LaunchScreen.xib in Resources */,
 				F5CE4D871A0D13C7006C0FFC /* badge_locked.png in Resources */,
