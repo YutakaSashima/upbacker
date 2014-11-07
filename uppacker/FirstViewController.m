@@ -10,6 +10,7 @@
 #import "MyAnnotation.h"
 #import "MapManager.h"
 #import "MapPoint.h"
+#import "DetailViewController.h"
 
 @interface FirstViewController ()
 
@@ -128,6 +129,11 @@ calloutAccessoryControlTapped:(UIControl*)control {
     NSLog(@"Test");
     
     //[self performSegueWithIdentifier:@"presentDetailView" sender:self];
+    
+    // FirstScene と SecondScene が同じ Storyboard にある場合
+    DetailViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailScene"];
+    
+    [self presentModalViewController:secondViewController animated:YES];
 }
 
 //ピンを配置するときに呼び出される処理

@@ -24,6 +24,7 @@
 		455328FC1A0D13670025AD71 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 455328FB1A0D13670025AD71 /* MyAnnotation.m */; };
 		455328FE1A0D15E50025AD71 /* location.plist in Resources */ = {isa = PBXBuildFile; fileRef = 455328FD1A0D15E50025AD71 /* location.plist */; };
 		455329001A0D3E8B0025AD71 /* roma.png in Resources */ = {isa = PBXBuildFile; fileRef = 455328FF1A0D3E8B0025AD71 /* roma.png */; };
+		455329031A0D458F0025AD71 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455329021A0D458F0025AD71 /* DetailViewController.m */; };
 		F5CE4D801A0CED2D006C0FFC /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */; };
 		F5CE4D841A0CFB0F006C0FFC /* MapMission.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D831A0CFB0F006C0FFC /* MapMission.m */; };
 		F5CE4D871A0D13C7006C0FFC /* badge_locked.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CE4D851A0D13C7006C0FFC /* badge_locked.png */; };
@@ -68,6 +69,8 @@
 		455328FB1A0D13670025AD71 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 		455328FD1A0D15E50025AD71 /* location.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = location.plist; sourceTree = "<group>"; };
 		455328FF1A0D3E8B0025AD71 /* roma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roma.png; sourceTree = "<group>"; };
+		455329011A0D458F0025AD71 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		455329021A0D458F0025AD71 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
 		F5CE4D811A0CED39006C0FFC /* MapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
 		F5CE4D821A0CFB0F006C0FFC /* MapMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapMission.h; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				455328C01A0CE9840025AD71 /* Supporting Files */,
 				455328F11A0D02710025AD71 /* RunViewController.h */,
 				455328F21A0D02710025AD71 /* RunViewController.m */,
+				455329011A0D458F0025AD71 /* DetailViewController.h */,
+				455329021A0D458F0025AD71 /* DetailViewController.m */,
 			);
 			path = uppacker;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				455328F31A0D02710025AD71 /* RunViewController.m in Sources */,
 				455328C91A0CE9840025AD71 /* FirstViewController.m in Sources */,
 				455328C31A0CE9840025AD71 /* main.m in Sources */,
+				455329031A0D458F0025AD71 /* DetailViewController.m in Sources */,
 				F5CE4D801A0CED2D006C0FFC /* MapManager.m in Sources */,
 				455328F01A0CEC820025AD71 /* MapPoint.m in Sources */,
 				F5CE4D841A0CFB0F006C0FFC /* MapMission.m in Sources */,
