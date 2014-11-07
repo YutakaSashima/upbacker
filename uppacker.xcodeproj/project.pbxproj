@@ -18,6 +18,8 @@
 		455328EA1A0CEBA70025AD71 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455328E91A0CEBA70025AD71 /* MapKit.framework */; };
 		455328EC1A0CEBAE0025AD71 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455328EB1A0CEBAE0025AD71 /* CoreLocation.framework */; };
 		455328F01A0CEC820025AD71 /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 455328EF1A0CEC820025AD71 /* MapPoint.m */; };
+		F5CE4D801A0CED2D006C0FFC /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */; };
+		F5CE4D841A0CFB0F006C0FFC /* MapMission.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D831A0CFB0F006C0FFC /* MapMission.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,10 @@
 		455328EB1A0CEBAE0025AD71 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		455328EE1A0CEC820025AD71 /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
 		455328EF1A0CEC820025AD71 /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
+		F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
+		F5CE4D811A0CED39006C0FFC /* MapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
+		F5CE4D821A0CFB0F006C0FFC /* MapMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapMission.h; sourceTree = "<group>"; };
+		F5CE4D831A0CFB0F006C0FFC /* MapMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapMission.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,10 @@
 			children = (
 				455328EE1A0CEC820025AD71 /* MapPoint.h */,
 				455328EF1A0CEC820025AD71 /* MapPoint.m */,
+				F5CE4D811A0CED39006C0FFC /* MapManager.h */,
+				F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */,
+				F5CE4D821A0CFB0F006C0FFC /* MapMission.h */,
+				F5CE4D831A0CFB0F006C0FFC /* MapMission.m */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -249,7 +259,9 @@
 				455328C61A0CE9840025AD71 /* AppDelegate.m in Sources */,
 				455328C91A0CE9840025AD71 /* FirstViewController.m in Sources */,
 				455328C31A0CE9840025AD71 /* main.m in Sources */,
+				F5CE4D801A0CED2D006C0FFC /* MapManager.m in Sources */,
 				455328F01A0CEC820025AD71 /* MapPoint.m in Sources */,
+				F5CE4D841A0CFB0F006C0FFC /* MapMission.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

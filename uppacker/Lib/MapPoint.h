@@ -23,4 +23,5 @@
 -(CLLocationDistance)getDistance:(double )latitude longitude:(double)longitude;
 //2点の距離(m)を返す
 -(CLLocationDistance)getDistanceMapPoint:(MapPoint*)targetpos;
+
 @end
