@@ -21,6 +21,8 @@
 		455328F31A0D02710025AD71 /* RunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455328F21A0D02710025AD71 /* RunViewController.m */; };
 		455328F61A0D039E0025AD71 /* pari.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 455328F51A0D039E0025AD71 /* pari.jpg */; };
 		455328F81A0D071A0025AD71 /* dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 455328F71A0D071A0025AD71 /* dash.png */; };
+		455328FC1A0D13670025AD71 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 455328FB1A0D13670025AD71 /* MyAnnotation.m */; };
+		455328FE1A0D15E50025AD71 /* location.plist in Resources */ = {isa = PBXBuildFile; fileRef = 455328FD1A0D15E50025AD71 /* location.plist */; };
 		F5CE4D801A0CED2D006C0FFC /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */; };
 		F5CE4D841A0CFB0F006C0FFC /* MapMission.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D831A0CFB0F006C0FFC /* MapMission.m */; };
 		F5CE4D871A0D13C7006C0FFC /* badge_locked.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CE4D851A0D13C7006C0FFC /* badge_locked.png */; };
@@ -61,6 +63,9 @@
 		455328F21A0D02710025AD71 /* RunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunViewController.m; sourceTree = "<group>"; };
 		455328F51A0D039E0025AD71 /* pari.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pari.jpg; sourceTree = "<group>"; };
 		455328F71A0D071A0025AD71 /* dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dash.png; sourceTree = "<group>"; };
+		455328FA1A0D13670025AD71 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		455328FB1A0D13670025AD71 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
+		455328FD1A0D15E50025AD71 /* location.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = location.plist; sourceTree = "<group>"; };
 		F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
 		F5CE4D811A0CED39006C0FFC /* MapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
 		F5CE4D821A0CFB0F006C0FFC /* MapMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapMission.h; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 		455328BF1A0CE9840025AD71 /* uppacker */ = {
 			isa = PBXGroup;
 			children = (
+				455328F91A0D132E0025AD71 /* MapViewLib */,
 				455328F41A0D038F0025AD71 /* Img */,
 				455328ED1A0CEC820025AD71 /* Lib */,
 				455328C41A0CE9840025AD71 /* AppDelegate.h */,
@@ -178,6 +184,16 @@
 				455328F51A0D039E0025AD71 /* pari.jpg */,
 			);
 			path = Img;
+			sourceTree = "<group>";
+		};
+		455328F91A0D132E0025AD71 /* MapViewLib */ = {
+			isa = PBXGroup;
+			children = (
+				455328FA1A0D13670025AD71 /* MyAnnotation.h */,
+				455328FB1A0D13670025AD71 /* MyAnnotation.m */,
+				455328FD1A0D15E50025AD71 /* location.plist */,
+			);
+			path = MapViewLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +283,7 @@
 				F5CE4D871A0D13C7006C0FFC /* badge_locked.png in Resources */,
 				455328D11A0CE9840025AD71 /* Images.xcassets in Resources */,
 				455328F61A0D039E0025AD71 /* pari.jpg in Resources */,
+				455328FE1A0D15E50025AD71 /* location.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +309,7 @@
 				F5CE4D801A0CED2D006C0FFC /* MapManager.m in Sources */,
 				455328F01A0CEC820025AD71 /* MapPoint.m in Sources */,
 				F5CE4D841A0CFB0F006C0FFC /* MapMission.m in Sources */,
+				455328FC1A0D13670025AD71 /* MyAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
