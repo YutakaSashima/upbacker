@@ -23,7 +23,19 @@
     return YES;
 }
 
+//戻ってきた時コールアウトを消す
+- (void)viewDidAppear:(BOOL)animated
+{
+    NSArray *selectedAnnotations = self.map.selectedAnnotations;
+    for(id annotation in selectedAnnotations) {
+        [self.map deselectAnnotation:annotation animated:NO];
+    }
+}
+
 - (void)viewDidLoad {
+    
+    
+    
     [super viewDidLoad];
     // マップにユーザの現在地を表示
     //self.map.showsUserLocation = YES;
