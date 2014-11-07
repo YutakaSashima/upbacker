@@ -104,46 +104,15 @@
   annotationView:(MKAnnotationView*)annotationView
 calloutAccessoryControlTapped:(UIControl*)control {
 
-    //詳細画面の表示
-    //[self DispDetailView];
-    //詳細ビューにデータを追加する
-    //[detailController setPinInfo:self.mymapView annotationView:annotationView viewController:self];
-    
-    
-    //StoryBoradの詳細ビューコントローラとってきてモーダルビュー表示を行う
+    //StoryBoradにある詳細ビューコントローラとって来る
     DetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailScene"];
     
-    ////選択されたピンIDを保存する。
+    //選択ピンのタイトル取得してビューコントローラに設置
     MyAnnotation *test;
     test = annotationView.annotation;
-    NSLog(@"pinid:%@",test.title);
     [detailViewController setCity:test.title];
 
-    /*if([test.title isEqualToString:@"パリ"]){
-        [detailViewController setCity:@"パリ"];
-    }
-    else if([test.title isEqualToString:@"バルセロナ"]){
-        [detailViewController setCity:@"バルセロナ"];
-    }
-    else if([test.title isEqualToString:@"ミラノ"]){
-        [detailViewController setCity:@"ミラノ"];
-    }
-    else if([test.title isEqualToString:@"ミュンヘン"]){
-        [detailViewController setCity:@"ミュンヘン"];
-    }
-    else if([test.title isEqualToString:@"アムステルダム"]){
-        [detailViewController setCity:@"アムステルダム"];
-    }
-    else if([test.title isEqualToString:@"ローマ"]){
-        [detailViewController setCity:@"ローマ"];
-    }
-    else{
-        NSLog(@"バグ");
-    }*/
-    
-    
-    
-
+    //ビューコントローラの表示
     [self presentModalViewController:detailViewController animated:YES];
 }
 
