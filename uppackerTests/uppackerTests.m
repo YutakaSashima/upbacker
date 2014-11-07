@@ -44,12 +44,24 @@
   NSArray* points = [MapManager sharedManager].points;
   NSLog(@"city count = %d", (int)[points count]);
   
+  // 0->1
   [[MapManager sharedManager] setStartPoint:[points objectAtIndex:0]];
   [[MapManager sharedManager] setGoalPoint:[points objectAtIndex:1]];
   NSLog(@"lat=%f, lon=%f", [MapManager sharedManager].currentLatitude, [MapManager sharedManager].currentLongitude);
-  
-  [[MapManager sharedManager] addMoveDistance:100];
+  [[MapManager sharedManager] addMoveDistance:10000];
   NSLog(@"lat=%f, lon=%f", [MapManager sharedManager].currentLatitude, [MapManager sharedManager].currentLongitude);
+  
+  // 1->2
+  [[MapManager sharedManager] setStartPoint:[points objectAtIndex:1]];
+  [[MapManager sharedManager] setGoalPoint:[points objectAtIndex:2]];
+  NSLog(@"lat=%f, lon=%f", [MapManager sharedManager].currentLatitude, [MapManager sharedManager].currentLongitude);
+  [[MapManager sharedManager] addMoveDistance:10000];
+  NSLog(@"lat=%f, lon=%f", [MapManager sharedManager].currentLatitude, [MapManager sharedManager].currentLongitude);
+  
+  // クリア済みミッションのチェック
+  int missionCnt = (int)[[[MapManager sharedManager] clearMissions] count];
+  NSLog(@"mission count = %d", missionCnt);
+  XCTAssert(1 == missionCnt, "Mission count = 1");
 }
 
 @end
