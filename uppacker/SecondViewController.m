@@ -21,6 +21,11 @@
     // Do any additional setup after loading the view, typically from a nib.
   
   //
+  CGRect screenRect = [[UIScreen mainScreen] bounds];
+  CGFloat screenWidth = screenRect.size.width;
+  CGFloat screenHeight = screenRect.size.height;
+  CGFloat margin = 10.0;
+  
   MapManager* manager = [MapManager sharedManager];
   NSArray* points = [manager points];
   NSArray* visitPoints = [manager visitPoints];
@@ -33,8 +38,8 @@
       image = [UIImage imageNamed:@"badge_locked.png"];
     }
     UIImage *scaledImage;  // リサイズ後UIImage
-    CGFloat width = 120;  // リサイズ後幅のサイズ
-    CGFloat height = 120;  // リサイズ後高さのサイズ
+    CGFloat width = (screenWidth - 4 * margin) / 3.0;  // リサイズ後幅のサイズ
+    CGFloat height = width;  // リサイズ後高さのサイズ
     UIGraphicsBeginImageContext(CGSizeMake(width, height));
     [image drawInRect:CGRectMake(0, 0, width, height)];
     scaledImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -44,7 +49,8 @@
     
     int row = i / 3;
     int col = i % 3;
-    iv.center = CGPointMake(col * width + width/2, row * height + height/2);
+    iv.center = CGPointMake(col * (width + margin) + width/2 + margin,
+                            row * (height + margin) + height/2 + margin);
     [self.view addSubview:iv];
   }
   
