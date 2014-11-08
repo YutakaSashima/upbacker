@@ -105,13 +105,13 @@
     [btn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];*/
     
-    UIImage *imgs = [UIImage imageNamed:@"home_b"];
+    UIImage *imgs = [UIImage imageNamed:@"ftop2"];
     [self.topbtnout setBackgroundImage:imgs forState:UIControlStateNormal];
     
-    UIImage *imgs2 = [UIImage imageNamed:@"map_b"];
+    UIImage *imgs2 = [UIImage imageNamed:@"fmap2"];
     [self.mapbtnout setBackgroundImage:imgs2 forState:UIControlStateNormal];
     
-    UIImage *imgs3 = [UIImage imageNamed:@"badge_b"];
+    UIImage *imgs3 = [UIImage imageNamed:@"fbadge2"];
     [self.badgebtnout setBackgroundImage:imgs3 forState:UIControlStateNormal];
     
 
@@ -187,7 +187,7 @@
     
     SecondViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondView"];
     //ビューコントローラの表示
-    [self presentModalViewController:run animated:NO];
+    [self presentViewController:run animated:NO completion:nil];
 
 }
 - (IBAction)next:(id)sender {
@@ -200,6 +200,10 @@
     }
     else if([MapManager sharedManager].globalCnt == 1){
         img_mae = [UIImage imageNamed:@"run_100.png"];  // リサイズ前UIImage
+        
+    }
+    else if([MapManager sharedManager].globalCnt == 2){
+        img_mae = [UIImage imageNamed:@"bg_get.png"];  // リサイズ前UIImage
         
     }
     else{

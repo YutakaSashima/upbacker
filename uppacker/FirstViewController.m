@@ -69,16 +69,14 @@
     //[[MapManager sharedManager] setStartPoint:[points objectAtIndex:0]];
     //[[MapManager sharedManager] setGoalPoint:[points objectAtIndex:1]];
     
-    UIImage *imgs = [UIImage imageNamed:@"home_b"];
+    UIImage *imgs = [UIImage imageNamed:@"ftop2"];
     [self.topbtnout setBackgroundImage:imgs forState:UIControlStateNormal];
     
-    UIImage *imgs2 = [UIImage imageNamed:@"map_b"];
+    UIImage *imgs2 = [UIImage imageNamed:@"fmap2"];
     [self.mapbtnout setBackgroundImage:imgs2 forState:UIControlStateNormal];
     
-    UIImage *imgs3 = [UIImage imageNamed:@"badge_b"];
+    UIImage *imgs3 = [UIImage imageNamed:@"fbadge2"];
     [self.bgbtnout setBackgroundImage:imgs3 forState:UIControlStateNormal];
-
-    
 }
 
 - (void)didReceiveMemoryWarning {

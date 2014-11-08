@@ -12,6 +12,7 @@
 #import "MapManager.h"
 #import "MapPoint.h"
 #import "DetailViewController.h"
+#import "RunViewController.h"
 
 @interface DetailViewController ()
 
@@ -85,15 +86,14 @@
         img_mae = [UIImage imageNamed:@"barcelona.png"];  // リサイズ前UIImage
         widthPer = 0.7;  // リサイズ後幅の倍率
         heightPer = 0.7;  // リサイズ後高さの倍率
-        self.detailtext.text = @"バルセロナは、スペイン北東部に位置するカタルーニャ州の州都で、バルセロナ県の県都でもある。スペイン国内では、首都マドリードに次ぐ第2の都市";
-        
+        self.detailtext.text = @"バルセロナは、スペイン北東部に位置するカタルーニャ州の州都で、バルセロナ県の県都でもある。スペイン国内では、首都マドリードに次ぐ第2の都市 \n\n\n 14279歩";
     }
     else if([self.selectCity  isEqualToString:@"ミラノ"]){
         NSLog(@"3");
         img_mae = [UIImage imageNamed:@"milano.png"];  // リサイズ前UIImage
         widthPer = 0.7;  // リサイズ後幅の倍率
         heightPer = 0.7;  // リサイズ後高さの倍率
-        self.detailtext.text = @"ミラノは、イタリア及び南ヨーロッパ最大の都市圏人口を擁する都市で、ミラノ県の県都およびロンバルディア州の州都である。ヨーロッパ有数の世界都市。イタリア語のアクセントの関係でミラーノと記されることもある。";
+        self.detailtext.text = @"ミラノは、イタリア及び南ヨーロッパ最大の都市圏人口を擁する都市で、ミラノ県の県都およびロンバルディア州の州都である。ヨーロッパ有数の世界都市。イタリア語のアクセントの関係でミラーノと記されることもある。\n\n\n 11744歩";
         
     }
     else if([self.selectCity  isEqualToString:@"ミュンヘン"]){
@@ -101,22 +101,23 @@
         img_mae = [UIImage imageNamed:@"munich.png"];  // リサイズ前UIImage
         widthPer = 0.7;  // リサイズ後幅の倍率
         heightPer = 0.7;  // リサイズ後高さの倍率
-                self.detailtext.text = @"ミュンヘンはドイツの連邦州であるバイエルン州最大の都市で州都である。イーザル川河畔にあり、バイエルンアルプスの北側に位置する。ベルリン、ハンブルクに次いでドイツでは3番目に大きな都市で、市域人口は140万人近くに達する。ミュンヘンでは1972年にミュンヘンオリンピックが開催された。";
+                self.detailtext.text = @"ミュンヘンはドイツの連邦州であるバイエルン州最大の都市で州都である。イーザル川河畔にあり、バイエルンアルプスの北側に位置する。ベルリン、ハンブルクに次いでドイツでは3番目に大きな都市で、市域人口は140万人近くに達する。ミュンヘンでは1972年にミュンヘンオリンピックが開催された。\n\n\n 11057歩";
     }
     else if([self.selectCity  isEqualToString:@"アムステルダム"]){
         NSLog(@"5");
         img_mae = [UIImage imageNamed:@"amsterdam.png"];  // リサイズ前UIImage
         widthPer = 0.7;  // リサイズ後幅の倍率
         heightPer = 0.7;  // リサイズ後高さの倍率
-        self.detailtext.text = @"アムステルダムは、オランダの北ホラント州の基礎自治体であり、オランダ最大の都市である。人口820,654人、都市圏人口は2,289,762人にのぼる。商業および観光が盛んである。オランダ語での発音は片仮名で表記すると「アムスタダム」に近い部に位置するカタルーニャ州の州都で、バルセロナ県の県都でもある。スペイン国内では、首都マドリードに次ぐ第2の都市";
+        self.detailtext.text = @"アムステルダムは、オランダの北ホラント州の基礎自治体であり、オランダ最大の都市である。人口820,654人、都市圏人口は2,289,762人にのぼる。商業および観光が盛んである。オランダ語での発音は片仮名で表記すると「アムスタダム」に近い部に位置するカタルーニャ州の州都で、バルセロナ県の県都でもある。スペイン国内では、首都マドリードに次ぐ第2の都市 \n\n\n 6771歩";
     }
     else if([self.selectCity  isEqualToString:@"ローマ"]){
         NSLog(@"6");
         img_mae = [UIImage imageNamed:@"rome.png"];  // リサイズ前UIImage
         widthPer = 0.7;  // リサイズ後幅の倍率
         heightPer = 0.7;  // リサイズ後高さの倍率
-        self.detailtext.text = @"ローマは、イタリアの首都。欧州有数の世界都市であり、ラツィオ州の州都、ローマ県のコムーネの一つで、ローマ県の県都でもある。";
-        
+        self.detailtext.text = @"ローマは、イタリアの首都。欧州有数の世界都市であり、ラツィオ州の州都、ローマ県のコムーネの一つで、ローマ県の県都でもある。\n\n\n 19743歩";
+        //self.hosu.text = @"５０００歩";
+
         
     }
     else{
@@ -220,4 +221,9 @@
 
 
 
+- (IBAction)setTargetBtn:(id)sender {
+    RunViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"RunView"];
+    //ビューコントローラの表示
+    [self presentViewController:run animated:NO completion:nil];
+}
 @end
