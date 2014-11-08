@@ -49,7 +49,7 @@
     [self.view addSubview:imageView];
     */
     
-    UIImage *img_mae = [UIImage imageNamed:@"run_p1.png"];  // リサイズ前UIImage
+    UIImage *img_mae = [UIImage imageNamed:@"top_0.png"];  // リサイズ前UIImage
     UIImage *img_ato;  // リサイズ後UIImage
     float widthPer = 0.5;  // リサイズ後幅の倍率
     float heightPer = 0.5;  // リサイズ後高さの倍率

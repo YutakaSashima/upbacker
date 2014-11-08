@@ -11,6 +11,9 @@
 @interface SecondViewController : UIViewController
 
 - (IBAction)backbtn:(id)sender;
+- (IBAction)goTop:(id)sender;
+- (IBAction)gomap:(id)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *badgebg;
 
 @end
 

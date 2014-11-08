@@ -29,13 +29,13 @@ static MapManager *sharedData_ = nil;
     
     // 都市の初期化
     self.points = [NSMutableArray array];
-    //MapPoint* pt1 = [[MapPoint alloc] initWithName:@"パリ" latitude:48.58 longitude:2.27];
+    MapPoint* pt1 = [[MapPoint alloc] initWithName:@"パリ" latitude:48.58 longitude:2.27];
     MapPoint* pt2 = [[MapPoint alloc] initWithName:@"バルセロナ" latitude:41.25 longitude:2.08];
     MapPoint* pt3 = [[MapPoint alloc] initWithName:@"ミラノ" latitude:45.28 longitude:9.12];
     MapPoint* pt4 = [[MapPoint alloc] initWithName:@"ミュンヘン" latitude:48.08 longitude:11.42];
     MapPoint* pt5 = [[MapPoint alloc] initWithName:@"アムステルダム" latitude:52.21 longitude:4.54];
     MapPoint* pt6 = [[MapPoint alloc] initWithName:@"ローマ" latitude:41.48 longitude:12.14];
-    //[self.points addObject:pt1];
+    [self.points addObject:pt1];
     [self.points addObject:pt2];
     [self.points addObject:pt3];
     [self.points addObject:pt4];

@@ -7,6 +7,8 @@
 //
 
 #import "SecondViewController.h"
+#import "FirstViewController.h"
+#import "RunViewController.h"
 
 #import "MapManager.h"
 
@@ -26,7 +28,7 @@
     // Do any additional setup after loading the view, typically from a nib.
   
   //
-  CGRect screenRect = [[UIScreen mainScreen] bounds];
+  /*CGRect screenRect = [[UIScreen mainScreen] bounds];
   CGFloat screenWidth = screenRect.size.width;
   CGFloat screenHeight = screenRect.size.height;
   CGFloat margin = 10.0;
@@ -58,6 +60,25 @@
                             row * (height + margin) + height/2 + margin);
     [self.view addSubview:iv];
   }
+   */
+    
+    
+    UIImage *img_mae = [UIImage imageNamed:@"badge_bg.png"];  // リサイズ前UIImage
+    UIImage *img_ato;  // リサイズ後UIImage
+    float widthPer = 0.5;  // リサイズ後幅の倍率
+    float heightPer = 0.5;  // リサイズ後高さの倍率
+    CGSize sz = CGSizeMake(img_mae.size.width*widthPer,
+                           img_mae.size.height*heightPer);
+    UIGraphicsBeginImageContext(sz);
+    [img_mae drawInRect:CGRectMake(0, 0, sz.width, sz.height)];
+    img_ato = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:img_ato];
+    imageView.center = CGPointMake(160, 283);
+    
+    self.badgebg.image = img_mae;
+    
+    
   
 }
 
@@ -68,5 +89,20 @@
 
 - (IBAction)backbtn:(id)sender {
     [ self dismissViewControllerAnimated:YES completion:nil];    
+}
+
+- (IBAction)goTop:(id)sender {
+    RunViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"RunView"];
+    //ビューコントローラの表示
+    [self presentModalViewController:run animated:YES];
+
+}
+
+- (IBAction)gomap:(id)sender {
+    FirstViewController *secondVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"map"];
+    
+    //secondVC.secondNum = self.firstNum;
+    [self presentViewController:secondVC animated:YES completion:nil];
+
 }
 @end

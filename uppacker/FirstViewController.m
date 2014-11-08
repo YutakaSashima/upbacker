@@ -12,6 +12,7 @@
 #import "MapPoint.h"
 #import "DetailViewController.h"
 #import "RunViewController.h"
+#import "SecondViewController.h"
 
 @interface FirstViewController ()
 
@@ -57,8 +58,8 @@
     // 縮尺を指定
     MKCoordinateRegion cr = self.map.region;
     cr.center = co;
-    cr.span.latitudeDelta = 50;
-    cr.span.longitudeDelta = 50;
+    cr.span.latitudeDelta = 40;
+    cr.span.longitudeDelta = 40;
     [self.map setRegion:cr animated:NO];
     
     self.map.showsUserLocation = YES;
@@ -128,18 +129,43 @@ calloutAccessoryControlTapped:(UIControl*)control {
                     initWithAnnotation:annotation reuseIdentifier:@"pin"];
     }
     
+    MyAnnotation *temp = annotation;
+    if( [temp.title isEqualToString:@"パリ"]){
+        //return nil;
+        
+        
+        MKAnnotationView *annotationView;
+        // ②再利用可能なannotationがあるかどうかを判断するための識別子を定義
+        NSString* identifier = @"Pin";
+        // ③dequeueReusableAnnotationViewWithIdentifierで"Pin"という識別子の使いまわせるannotationがあるかチェック
+        annotationView = (MKAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+        // ④使い回しができるannotationがない場合、annotationの初期化
+        if(annotationView == nil) {
+            annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+        }
+        // ⑤好きな画像をannotationとして設定
+        annotationView.image = [UIImage imageNamed:@"set.png"];
+        annotationView.annotation = annotation;
+        return annotationView;
+    }
+    else{
+        //配置するピンの設定
+        pinView.pinColor = MKPinAnnotationColorGreen;
+        pinView.animatesDrop = YES;
+        pinView.canShowCallout = YES;
+        pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        pinView.annotation = annotation;
+        return pinView;
+        
+    }
+    
     //配置するピンの設定
-    pinView.pinColor = MKPinAnnotationColorGreen;
+    /*pinView.pinColor = MKPinAnnotationColorGreen;
     pinView.animatesDrop = YES;
     pinView.canShowCallout = YES;
     pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    pinView.annotation = annotation;
-    
-    
-    
-    
-    return pinView;
-    
+    pinView.annotation = annotation;*/
+    //return pinView;
 }
 
 - (IBAction)gotoTop:(id)sender {
@@ -147,6 +173,18 @@ calloutAccessoryControlTapped:(UIControl*)control {
     RunViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"RunView"];
     //ビューコントローラの表示
     [self presentModalViewController:run animated:YES];
+    
+    
+}
+
+- (IBAction)btnbg:(id)sender {
+    
+    //SecondView
+    
+    SecondViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondView"];
+    //ビューコントローラの表示
+    [self presentModalViewController:run animated:YES];
+
     
     
 }

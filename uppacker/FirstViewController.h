@@ -18,5 +18,8 @@
 
 - (IBAction)gotoTop:(id)sender;
 
+- (IBAction)btnbg:(id)sender;
+
+
 @end
 
