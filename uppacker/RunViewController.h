@@ -18,5 +18,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *goaldist;
 
 @property (strong,nonatomic) UIImageView *playerImgView;
+- (IBAction)backmenu:(id)sender;
 
 @end

@@ -105,6 +105,9 @@
     
 }
 
+//
+
+
 -(void)viewDidAppear:(BOOL)animated{
     //場所を初期位置にする
     self.playerImgView.frame = CGRectMake(180, 100, 80, 80);
@@ -147,5 +150,8 @@
          // アニメーション終了時
          NSLog(@"アニメーション終了");
      }];
+}
+- (IBAction)backmenu:(id)sender {
+    [ self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
