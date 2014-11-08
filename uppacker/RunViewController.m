@@ -60,10 +60,12 @@
     UIImageView *imageView = [[UIImageView alloc]initWithImage:img_ato];
     imageView.center = CGPointMake(160, 283);
     
+    self.targetPoint.image = img_mae;
+    
     //imageView.frame =  CGRectMake(0, 0, 640, 1136);
     
     
-    [self.view addSubview:imageView];
+    //[self.view addSubview:imageView];
     
     
     /*
@@ -80,7 +82,27 @@
     self.playerImgView = [[UIImageView alloc]initWithImage:img_ato2];
     self.playerImgView.frame =  CGRectMake(180, 100, 80, 80);
     [self.view addSubview:self.playerImgView];
+     
+     
     */
+    
+    /*UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 50, 50) ];
+    button.titleLabel.text = [NSString stringWithFormat: @"Button"];
+    [self.view addSubview:button];*/
+    
+    /*UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = frame; // CGRect: UIViewのインスタンスメソッド
+    button.tag   = tag;   // NSInteger: UIViewのインスタンスメソッド
+    [button setTitle:title forState:UIControlStateNormal]; // UIButtonのインスタンスメソッド
+     */
+    
+    /*UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(100, 0, 100, 100);
+    btn.titleLabel.text = @"abc";
+    //[btn setImage:img forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];*/
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{

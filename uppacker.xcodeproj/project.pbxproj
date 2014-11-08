@@ -35,6 +35,7 @@
 		4553291A1A0D7DB10025AD71 /* ASOBounceButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 455329141A0D7DB10025AD71 /* ASOBounceButtonView.m */; };
 		4553291B1A0D7DB10025AD71 /* ASOTwoStateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 455329181A0D7DB10025AD71 /* ASOTwoStateButton.m */; };
 		45EF1B4F1A0DA1A4005152E1 /* run_p1.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EF1B4E1A0DA1A4005152E1 /* run_p1.png */; };
+		45EF1B521A0DAA36005152E1 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EF1B511A0DAA36005152E1 /* TopViewController.m */; };
 		F5CE4D801A0CED2D006C0FFC /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */; };
 		F5CE4D841A0CFB0F006C0FFC /* MapMission.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D831A0CFB0F006C0FFC /* MapMission.m */; };
 		F5CE4D871A0D13C7006C0FFC /* badge_locked.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CE4D851A0D13C7006C0FFC /* badge_locked.png */; };
@@ -94,6 +95,8 @@
 		455329171A0D7DB10025AD71 /* ASOTwoStateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASOTwoStateButton.h; sourceTree = "<group>"; };
 		455329181A0D7DB10025AD71 /* ASOTwoStateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASOTwoStateButton.m; sourceTree = "<group>"; };
 		45EF1B4E1A0DA1A4005152E1 /* run_p1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = run_p1.png; sourceTree = "<group>"; };
+		45EF1B501A0DAA36005152E1 /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
+		45EF1B511A0DAA36005152E1 /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
 		F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
 		F5CE4D811A0CED39006C0FFC /* MapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
 		F5CE4D821A0CFB0F006C0FFC /* MapMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapMission.h; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 				455328F21A0D02710025AD71 /* RunViewController.m */,
 				455329011A0D458F0025AD71 /* DetailViewController.h */,
 				455329021A0D458F0025AD71 /* DetailViewController.m */,
+				45EF1B501A0DAA36005152E1 /* TopViewController.h */,
+				45EF1B511A0DAA36005152E1 /* TopViewController.m */,
 			);
 			path = uppacker;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 			files = (
 				4553291B1A0D7DB10025AD71 /* ASOTwoStateButton.m in Sources */,
 				455328CC1A0CE9840025AD71 /* SecondViewController.m in Sources */,
+				45EF1B521A0DAA36005152E1 /* TopViewController.m in Sources */,
 				4553291A1A0D7DB10025AD71 /* ASOBounceButtonView.m in Sources */,
 				455328C61A0CE9840025AD71 /* AppDelegate.m in Sources */,
 				455328F31A0D02710025AD71 /* RunViewController.m in Sources */,

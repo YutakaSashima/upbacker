@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Ma-mG-pk3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -83,7 +83,7 @@
         <!--top-->
         <scene sceneID="Vcb-dj-dXz">
             <objects>
-                <viewController id="iEj-yT-0UW" userLabel="top" sceneMemberID="viewController">
+                <viewController id="iEj-yT-0UW" userLabel="top" customClass="TopViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lbx-12-1IR"/>
                         <viewControllerLayoutGuide type="bottom" id="Aho-0k-ch9"/>
@@ -92,12 +92,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itw-AP-pdF">
-                                <rect key="frame" x="244" y="324" width="29" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siX-44-1la">
+                                <rect key="frame" x="40" y="315" width="45" height="30"/>
+                                <state key="normal" title="バッジ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lar-9I-l1Z">
+                                <rect key="frame" x="47" y="241" width="31" height="30"/>
+                                <state key="normal" title="Map">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9N-Cw-vAM">
+                                <rect key="frame" x="47" y="377" width="30" height="30"/>
+                                <state key="normal" title="Run">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openRun:" destination="iEj-yT-0UW" eventType="touchUpInside" id="jNj-eW-e7L"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -109,7 +124,7 @@
         <!--Run-->
         <scene sceneID="DPx-Bh-d8E">
             <objects>
-                <viewController id="5Ma-mG-pk3" userLabel="Run" customClass="RunViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RunView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Ma-mG-pk3" userLabel="Run" customClass="RunViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WQ0-EA-uFl"/>
                         <viewControllerLayoutGuide type="bottom" id="RTn-2v-nkL"/>
@@ -125,10 +140,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moy-oc-WRA">
-                                <rect key="frame" x="324" y="143" width="260" height="471"/>
+                                <rect key="frame" x="44" y="0.0" width="260" height="471"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="Udh-2Z-kNr"/>
-                                    <constraint firstAttribute="height" constant="471" id="ZwX-om-RvW"/>
+                                    <constraint firstAttribute="width" constant="320" id="MOb-Vq-mx7"/>
+                                    <constraint firstAttribute="height" constant="568" id="hmf-J6-3n0"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nko-jh-ZZJ">
@@ -139,7 +154,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uka-Il-ExC">
-                                <rect key="frame" x="130" y="317" width="30" height="30"/>
+                                <rect key="frame" x="351" y="298" width="30" height="30"/>
                                 <state key="normal" title="走る">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -147,14 +162,20 @@
                                     <action selector="dash:" destination="5Ma-mG-pk3" eventType="touchUpInside" id="UZJ-SM-7bt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vap-5S-mEH">
+                                <rect key="frame" x="211" y="309" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="nko-jh-ZZJ" secondAttribute="trailing" constant="119" id="Gbq-t5-2cU"/>
                             <constraint firstItem="uka-Il-ExC" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" constant="130" id="aoR-j0-CmH"/>
-                            <constraint firstItem="moy-oc-WRA" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" constant="198" id="dDo-Zj-Ywg"/>
                             <constraint firstItem="nko-jh-ZZJ" firstAttribute="top" secondItem="WQ0-EA-uFl" secondAttribute="bottom" constant="68" id="gZ0-BB-IRp"/>
                             <constraint firstItem="yG4-4C-2aE" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" constant="10" id="njJ-05-vuC"/>
+                            <constraint firstItem="moy-oc-WRA" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" id="yiE-hb-AW7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="b3V-rz-kVC"/>
