@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface TopViewController : UIViewController
+@interface TopViewController : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate>
 - (IBAction)openRun:(id)sender;
 - (IBAction)openBg:(id)sender;
+
+@property (strong, nonatomic) IBOutlet MKMapView *map;
 
 @end
