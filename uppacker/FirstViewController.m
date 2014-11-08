@@ -65,9 +65,19 @@
     self.map.showsUserLocation = YES;
     
     
-    NSArray* points = [MapManager sharedManager].points;
-    [[MapManager sharedManager] setStartPoint:[points objectAtIndex:0]];
-    [[MapManager sharedManager] setGoalPoint:[points objectAtIndex:1]];
+    //NSArray* points = [MapManager sharedManager].points;
+    //[[MapManager sharedManager] setStartPoint:[points objectAtIndex:0]];
+    //[[MapManager sharedManager] setGoalPoint:[points objectAtIndex:1]];
+    
+    UIImage *imgs = [UIImage imageNamed:@"home_b"];
+    [self.topbtnout setBackgroundImage:imgs forState:UIControlStateNormal];
+    
+    UIImage *imgs2 = [UIImage imageNamed:@"map_b"];
+    [self.mapbtnout setBackgroundImage:imgs2 forState:UIControlStateNormal];
+    
+    UIImage *imgs3 = [UIImage imageNamed:@"badge_b"];
+    [self.bgbtnout setBackgroundImage:imgs3 forState:UIControlStateNormal];
+
     
 }
 
@@ -144,7 +154,7 @@ calloutAccessoryControlTapped:(UIControl*)control {
             annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
         }
         // ⑤好きな画像をannotationとして設定
-        annotationView.image = [UIImage imageNamed:@"set.png"];
+        annotationView.image = [UIImage imageNamed:@"human_mini.png"];
         annotationView.annotation = annotation;
         return annotationView;
     }
@@ -166,13 +176,25 @@ calloutAccessoryControlTapped:(UIControl*)control {
     pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     pinView.annotation = annotation;*/
     //return pinView;
+    
+   /* UIImage *imgs = [UIImage imageNamed:@"home_b"];
+    [self.topbtnout setBackgroundImage:imgs forState:UIControlStateNormal];
+    
+    UIImage *imgs2 = [UIImage imageNamed:@"map_b"];
+    [self.mapbtnout setBackgroundImage:imgs2 forState:UIControlStateNormal];
+    
+    UIImage *imgs3 = [UIImage imageNamed:@"badge_b"];
+    [self.badgebtnout setBackgroundImage:imgs3 forState:UIControlStateNormal];*/
+    
+    
+
 }
 
 - (IBAction)gotoTop:(id)sender {
     
     RunViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"RunView"];
     //ビューコントローラの表示
-    [self presentModalViewController:run animated:YES];
+    [self presentModalViewController:run animated:NO];
     
     
 }
@@ -183,7 +205,7 @@ calloutAccessoryControlTapped:(UIControl*)control {
     
     SecondViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondView"];
     //ビューコントローラの表示
-    [self presentModalViewController:run animated:YES];
+    [self presentModalViewController:run animated:NO];
 
     
     

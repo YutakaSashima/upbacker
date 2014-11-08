@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0hl-Ly-63v">
-                                <rect key="frame" x="10" y="0.0" width="476" height="536"/>
+                                <rect key="frame" x="10" y="0.0" width="476" height="501"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="520" id="IAI-Yl-oTK"/>
                                 </constraints>
@@ -64,7 +64,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="bgbtnout" destination="7Pf-W3-gbq" id="ibh-py-KrO"/>
                         <outlet property="map" destination="0hl-Ly-63v" id="CVe-Vm-V2c"/>
+                        <outlet property="mapbtnout" destination="DbS-le-zTk" id="uru-la-hdK"/>
+                        <outlet property="topbtnout" destination="uqA-eg-kS1" id="h2b-3s-16q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -136,6 +139,9 @@
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="badgebg" destination="Yp7-5P-MHX" id="HxQ-bA-Rgn"/>
+                        <outlet property="bgbtnout" destination="8f5-1S-dAg" id="8iG-M0-Uts"/>
+                        <outlet property="mapbtnout" destination="y5E-0M-RqE" id="mDV-tT-Zeg"/>
+                        <outlet property="topbtnout" destination="dBG-MW-rHH" id="qkd-Kv-kIs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -247,7 +253,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vap-5S-mEH">
-                                <rect key="frame" x="274" y="502" width="30" height="30"/>
+                                <rect key="frame" x="440" y="492" width="30" height="30"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -255,49 +261,54 @@
                                     <action selector="backmenu:" destination="5Ma-mG-pk3" eventType="touchUpInside" id="rlx-0I-JOK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rP-fe-OAS">
-                                <rect key="frame" x="114" y="550" width="45" height="30"/>
-                                <state key="normal" title="マップ">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="tomapbtn:" destination="5Ma-mG-pk3" eventType="touchUpInside" id="3rX-H0-cyL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXs-5H-o3s">
-                                <rect key="frame" x="22" y="550" width="60" height="30"/>
-                                <state key="normal" title="★トップ">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCS-T0-b4B">
-                                <rect key="frame" x="190" y="550" width="45" height="30"/>
-                                <state key="normal" title="バッジ">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCS-T0-b4B">
+                                <rect key="frame" x="356" y="540" width="30" height="30"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="tobg:" destination="5Ma-mG-pk3" eventType="touchUpInside" id="0RC-J4-BpD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXs-5H-o3s">
+                                <rect key="frame" x="75" y="540" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rP-fe-OAS">
+                                <rect key="frame" x="191" y="540" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tomapbtn:" destination="5Ma-mG-pk3" eventType="touchUpInside" id="3rX-H0-cyL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kXs-5H-o3s" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" constant="22" id="8vc-Ww-3Lb"/>
-                            <constraint firstAttribute="bottom" secondItem="3rP-fe-OAS" secondAttribute="bottom" constant="10" id="C9E-gP-KM0"/>
+                            <constraint firstItem="kXs-5H-o3s" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" constant="62" id="8vc-Ww-3Lb"/>
+                            <constraint firstAttribute="bottom" secondItem="3rP-fe-OAS" secondAttribute="bottom" constant="7" id="C9E-gP-KM0"/>
                             <constraint firstAttribute="trailing" secondItem="nko-jh-ZZJ" secondAttribute="trailing" constant="119" id="Gbq-t5-2cU"/>
                             <constraint firstAttribute="bottom" secondItem="wCS-T0-b4B" secondAttribute="bottom" constant="10" id="Muc-bN-ihP"/>
                             <constraint firstItem="uka-Il-ExC" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" constant="130" id="aoR-j0-CmH"/>
                             <constraint firstItem="nko-jh-ZZJ" firstAttribute="top" secondItem="WQ0-EA-uFl" secondAttribute="bottom" constant="68" id="gZ0-BB-IRp"/>
                             <constraint firstItem="yG4-4C-2aE" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" constant="10" id="njJ-05-vuC"/>
-                            <constraint firstAttribute="bottom" secondItem="kXs-5H-o3s" secondAttribute="bottom" constant="10" id="r09-7O-Ajs"/>
+                            <constraint firstAttribute="bottom" secondItem="kXs-5H-o3s" secondAttribute="bottom" constant="7" id="r09-7O-Ajs"/>
+                            <constraint firstItem="wCS-T0-b4B" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" constant="184" id="s5L-xj-LPU"/>
+                            <constraint firstItem="3rP-fe-OAS" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" constant="124" id="t3n-Jo-fqP"/>
                             <constraint firstItem="moy-oc-WRA" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" id="yiE-hb-AW7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="b3V-rz-kVC"/>
                     <connections>
+                        <outlet property="badgebtnout" destination="wCS-T0-b4B" id="tvl-0A-Q8k"/>
                         <outlet property="goaldist" destination="yG4-4C-2aE" id="A5h-tf-Rx0"/>
+                        <outlet property="mapbtnout" destination="3rP-fe-OAS" id="VVZ-LX-QCN"/>
                         <outlet property="playerImg" destination="nko-jh-ZZJ" id="fti-aU-pga"/>
                         <outlet property="targetPoint" destination="moy-oc-WRA" id="tW3-d4-PXk"/>
+                        <outlet property="topbtnout" destination="kXs-5H-o3s" id="mRt-Vo-p2s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2u-HE-cBf" userLabel="First Responder" sceneMemberID="firstResponder"/>

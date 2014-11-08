@@ -105,6 +105,18 @@
     [btn addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];*/
     
+    UIImage *imgs = [UIImage imageNamed:@"home_b"];
+    [self.topbtnout setBackgroundImage:imgs forState:UIControlStateNormal];
+    
+    UIImage *imgs2 = [UIImage imageNamed:@"map_b"];
+    [self.mapbtnout setBackgroundImage:imgs2 forState:UIControlStateNormal];
+    
+    UIImage *imgs3 = [UIImage imageNamed:@"badge_b"];
+    [self.badgebtnout setBackgroundImage:imgs3 forState:UIControlStateNormal];
+    
+
+    
+    
 }
 
 //

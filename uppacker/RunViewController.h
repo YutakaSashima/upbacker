@@ -24,4 +24,9 @@
 
 - (IBAction)tobg:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIButton *topbtnout;
+
+@property (strong, nonatomic) IBOutlet UIButton *mapbtnout;
+@property (strong, nonatomic) IBOutlet UIButton *badgebtnout;
+
 @end
