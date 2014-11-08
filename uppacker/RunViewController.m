@@ -58,7 +58,7 @@
     img_ato = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     UIImageView *imageView = [[UIImageView alloc]initWithImage:img_ato];
-    imageView.center = CGPointMake(160, 200);
+    imageView.center = CGPointMake(160, 283);
     
     //imageView.frame =  CGRectMake(0, 0, 640, 1136);
     
