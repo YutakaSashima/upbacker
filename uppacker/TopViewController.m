@@ -8,6 +8,7 @@
 
 #import "TopViewController.h"
 #import "RunViewController.h"
+#import "SecondViewController.h"
 
 @interface TopViewController ()
 
@@ -36,18 +37,20 @@
 */
 
 - (IBAction)openRun:(id)sender {
-    NSLog(@"OpenRun");
+   // NSLog(@"OpenRun");
     
     RunViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"RunView"];
-    
-    //選択ピンのタイトル取得してビューコントローラに設置
-    /*MyAnnotation *test;
-    test = annotationView.annotation;
-    [detailViewController setCity:test.title];
-    */
-    
-    
     //ビューコントローラの表示
     [self presentModalViewController:run animated:YES];
+}
+
+- (IBAction)openBg:(id)sender {
+    
+    //SecondView
+    
+    SecondViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondView"];
+    //ビューコントローラの表示
+    [self presentModalViewController:run animated:YES];
+
 }
 @end

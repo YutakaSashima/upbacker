@@ -10,5 +10,6 @@
 
 @interface TopViewController : UIViewController
 - (IBAction)openRun:(id)sender;
+- (IBAction)openBg:(id)sender;
 
 @end
