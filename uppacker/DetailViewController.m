@@ -7,6 +7,11 @@
 //
 
 #import "DetailViewController.h"
+#import "MapManager.h"
+#import "MyAnnotation.h"
+#import "MapManager.h"
+#import "MapPoint.h"
+#import "DetailViewController.h"
 
 @interface DetailViewController ()
 
@@ -21,6 +26,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    
+    //自分でメッセージ受けるように設定
+    [self.bgmap setDelegate:self];
+    
+    //初期の配置
+    CLLocationCoordinate2D co;
+    co.latitude = 48.58; // 経度
+    co.longitude = 2.08; // 緯度
+    [self.bgmap setCenterCoordinate:co animated:YES];
+    [self.bgmap addAnnotations:[self createAnnotations]];
+    
+    // 縮尺を指定
+    MKCoordinateRegion cr = self.bgmap.region;
+    cr.center = co;
+    cr.span.latitudeDelta = 50;
+    cr.span.longitudeDelta = 50;
+    [self.bgmap setRegion:cr animated:NO];
+    
+    self.bgmap.showsUserLocation = YES;
+    self.bgmap.alpha = 0.4;
+    
+    
+    
+    
+
     // Do any additional setup after loading the view.
     UIImage *img_mae;
     float widthPer = 0.2;  // リサイズ後幅の倍率
@@ -115,6 +148,59 @@
 {
     self.selectCity = city;
 }
+
+
+
+//ピンを配置する
+- (NSMutableArray *)createAnnotations
+{
+    //ピンの位置を取得する
+    NSArray* points = [MapManager sharedManager].points;
+    
+    //返すデータ置き場
+    NSMutableArray *annotations = [[NSMutableArray alloc] init];
+    
+    //取得データを配列に入れる
+    for (int i = 0; i < points.count; i++) {
+        MapPoint *temp = points[i];
+        //NSLog(@"%d v = %@ lat:%f lon:%f", i, temp.name,temp.latitude,temp.longitude);
+        
+        CLLocationCoordinate2D coord;
+        coord.latitude = temp.latitude;
+        coord.longitude = temp.longitude;
+        MyAnnotation *annotation = [[MyAnnotation alloc] initWithTitle:temp.name AndCoordinate:coord];
+        [annotations addObject:annotation];
+    }
+    
+    
+    return annotations;
+}
+
+//ピンを配置するときに呼び出される処理
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    
+    MKPinAnnotationView *pinView = (MKPinAnnotationView *)
+    [mapView dequeueReusableAnnotationViewWithIdentifier:@"pin"];
+    if(pinView == nil){
+        pinView = [[MKPinAnnotationView alloc]
+                   initWithAnnotation:annotation reuseIdentifier:@"pin"];
+    }
+    
+    //配置するピンの設定
+    pinView.pinColor = MKPinAnnotationColorGreen;
+    pinView.animatesDrop = YES;
+    pinView.canShowCallout = YES;
+    pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    pinView.annotation = annotation;
+    
+    
+    
+    
+    return pinView;
+    
+}
+
 
 
 @end

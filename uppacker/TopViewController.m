@@ -57,6 +57,7 @@
     [[MapManager sharedManager] setStartPoint:[points objectAtIndex:0]];
     [[MapManager sharedManager] setGoalPoint:[points objectAtIndex:1]];
     
+    //self.map.alpha = 0.2;
     
 }
 

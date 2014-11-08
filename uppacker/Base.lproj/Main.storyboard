@@ -223,13 +223,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFR-0T-ixp">
-                                <rect key="frame" x="147" y="348" width="117" height="30"/>
+                                <rect key="frame" x="154" y="526" width="117" height="30"/>
                                 <state key="normal" title="目的地にする">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hao-ZU-0Mm">
-                                <rect key="frame" x="38" y="348" width="30" height="30"/>
+                                <rect key="frame" x="60" y="526" width="30" height="30"/>
                                 <state key="normal" title="戻る">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -237,9 +237,20 @@
                                     <action selector="back:" destination="Fgz-Hn-wiQ" eventType="touchUpInside" id="Ujf-0C-mB7"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ro-9M-y8h">
-                                <rect key="frame" x="38" y="218" width="240" height="106"/>
+                            <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olR-Ca-sSI">
+                                <rect key="frame" x="24" y="328" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="SiW-Md-cah"/>
+                                    <constraint firstAttribute="height" constant="800" id="UIW-4c-NMq"/>
+                                </constraints>
+                            </mapView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ro-9M-y8h">
+                                <rect key="frame" x="31" y="122" width="240" height="106"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="FE8-Xo-TWZ"/>
+                                    <constraint firstAttribute="width" constant="240" id="iIM-2X-G9g"/>
+                                </constraints>
                                 <string key="text">ローマは、イタリアの首都。欧州有数の世界都市であり、ラツィオ州の州都、ローマ県のコムーネの一つで、ローマ県の県都でもある。英語とフランス語の表記は「Rome」。 
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -249,8 +260,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0ro-9M-y8h" firstAttribute="leading" secondItem="TBe-T4-Ent" secondAttribute="leading" constant="25" id="0Rv-Vp-wIL"/>
+                            <constraint firstItem="olR-Ca-sSI" firstAttribute="top" secondItem="TBe-T4-Ent" secondAttribute="top" id="94Q-vY-Kx2"/>
+                            <constraint firstAttribute="bottom" secondItem="0ro-9M-y8h" secondAttribute="bottom" constant="150" id="Ffx-6o-5q7"/>
+                            <constraint firstAttribute="bottom" secondItem="olR-Ca-sSI" secondAttribute="bottom" id="TZF-kl-cb7"/>
+                            <constraint firstItem="olR-Ca-sSI" firstAttribute="leading" secondItem="TBe-T4-Ent" secondAttribute="leading" id="gIQ-42-bGa"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TZF-kl-cb7"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="bgmap" destination="olR-Ca-sSI" id="eEP-e8-NKx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUC-KC-hTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

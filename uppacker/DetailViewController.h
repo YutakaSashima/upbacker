@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate>
 - (IBAction)back:(id)sender;
 -(void) setCity:(NSString*)city;
 //選んだ街名
 @property (strong, nonatomic) NSString *selectCity;
+@property (strong, nonatomic) IBOutlet MKMapView *bgmap;
 
 @end
