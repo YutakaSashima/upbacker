@@ -32,7 +32,7 @@
 
     
     
-    UIImage *img_mae = [UIImage imageNamed:@"pari.jpg"];  // リサイズ前UIImage
+    /*UIImage *img_mae = [UIImage imageNamed:@"pari.jpg"];  // リサイズ前UIImage
     UIImage *img_ato;  // リサイズ後UIImage
     float widthPer = 0.2;  // リサイズ後幅の倍率
     float heightPer = 0.2;  // リサイズ後高さの倍率
@@ -45,8 +45,28 @@
     UIImageView *imageView = [[UIImageView alloc]initWithImage:img_ato];
     imageView.center = CGPointMake(40, 100);
     [self.view addSubview:imageView];
+    */
+    
+    UIImage *img_mae = [UIImage imageNamed:@"run_p1.png"];  // リサイズ前UIImage
+    UIImage *img_ato;  // リサイズ後UIImage
+    float widthPer = 0.5;  // リサイズ後幅の倍率
+    float heightPer = 0.5;  // リサイズ後高さの倍率
+    CGSize sz = CGSizeMake(img_mae.size.width*widthPer,
+                           img_mae.size.height*heightPer);
+    UIGraphicsBeginImageContext(sz);
+    [img_mae drawInRect:CGRectMake(0, 0, sz.width, sz.height)];
+    img_ato = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:img_ato];
+    imageView.center = CGPointMake(160, 200);
+    
+    //imageView.frame =  CGRectMake(0, 0, 640, 1136);
     
     
+    [self.view addSubview:imageView];
+    
+    
+    /*
     UIImage *img_mae2 = [UIImage imageNamed:@"dash.png"];  // リサイズ前UIImage
     UIImage *img_ato2;  // リサイズ後UIImage
     float widthPer2 = 0.2;  // リサイズ後幅の倍率
@@ -60,6 +80,7 @@
     self.playerImgView = [[UIImageView alloc]initWithImage:img_ato2];
     self.playerImgView.frame =  CGRectMake(180, 100, 80, 80);
     [self.view addSubview:self.playerImgView];
+    */
 }
 
 -(void)viewDidAppear:(BOOL)animated{
