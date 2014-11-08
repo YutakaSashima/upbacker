@@ -11,6 +11,7 @@
 #import "MapManager.h"
 #import "MapPoint.h"
 #import "DetailViewController.h"
+#import "RunViewController.h"
 
 @interface FirstViewController ()
 
@@ -141,4 +142,12 @@ calloutAccessoryControlTapped:(UIControl*)control {
     
 }
 
+- (IBAction)gotoTop:(id)sender {
+    
+    RunViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"RunView"];
+    //ビューコントローラの表示
+    [self presentModalViewController:run animated:YES];
+    
+    
+}
 @end

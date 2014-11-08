@@ -15,5 +15,8 @@
 
 @property (strong, nonatomic) IBOutlet MKMapView *map;
 
+
+- (IBAction)gotoTop:(id)sender;
+
 @end
 

@@ -8,6 +8,8 @@
 
 #import "RunViewController.h"
 #import "MapManager.h"
+#import "SecondViewController.h"
+#import "FirstViewController.h"
 
 @interface RunViewController ()
 
@@ -153,5 +155,26 @@
 }
 - (IBAction)backmenu:(id)sender {
     [ self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)tomapbtn:(id)sender {
+    //FirstViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"map"];
+    //ビューコントローラの表示
+    //[self presentModalViewController:run animated:YES];
+    
+    
+    FirstViewController *secondVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"map"];
+    
+    //secondVC.secondNum = self.firstNum;
+    [self presentViewController:secondVC animated:YES completion:nil];
+    
+}
+
+- (IBAction)tobg:(id)sender {
+    
+    SecondViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondView"];
+    //ビューコントローラの表示
+    [self presentModalViewController:run animated:YES];
+
 }
 @end

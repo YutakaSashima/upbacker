@@ -20,4 +20,8 @@
 @property (strong,nonatomic) UIImageView *playerImgView;
 - (IBAction)backmenu:(id)sender;
 
+- (IBAction)tomapbtn:(id)sender;
+
+- (IBAction)tobg:(id)sender;
+
 @end
