@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *mapbtnout;
 
 @property (strong, nonatomic) IBOutlet UIButton *bgbtnout;
+- (IBAction)change:(id)sender;
 
 @end
 

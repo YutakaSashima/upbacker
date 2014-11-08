@@ -217,4 +217,11 @@
     //画像切替
     
 }
+- (IBAction)badge_get:(id)sender {
+    //NSLog(@"abcd");
+    
+    SecondViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondView"];
+    //ビューコントローラの表示
+    [self presentViewController:run animated:NO completion:nil];
+}
 @end

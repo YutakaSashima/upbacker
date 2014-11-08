@@ -61,9 +61,13 @@
     [self.view addSubview:iv];
   }
    */
+    //else if([MapManager sharedManager].globalCnt == 2){
+     //   img_mae = [UIImage imageNamed:@"bg_get.png"];  // リサイズ前UIImage
+        
+    //}
+    //badge_bg.png
     
-    
-    UIImage *img_mae = [UIImage imageNamed:@"badge_bg.png"];  // リサイズ前UIImage
+    UIImage *img_mae = [UIImage imageNamed:@"bg_get.png"];  // リサイズ前UIImage
     UIImage *img_ato;  // リサイズ後UIImage
     float widthPer = 0.5;  // リサイズ後幅の倍率
     float heightPer = 0.5;  // リサイズ後高さの倍率
@@ -123,6 +127,24 @@
     
     //secondVC.secondNum = self.firstNum;
     [self presentViewController:secondVC animated:NO completion:nil];
+
+}
+- (IBAction)change:(id)sender {
+    UIImage *img_mae = [UIImage imageNamed:@"badge_bg.png"];  // リサイズ前UIImage
+    /*UIImage *img_ato;  // リサイズ後UIImage
+    float widthPer = 0.5;  // リサイズ後幅の倍率
+    float heightPer = 0.5;  // リサイズ後高さの倍率
+    CGSize sz = CGSizeMake(img_mae.size.width*widthPer,
+                           img_mae.size.height*heightPer);
+    UIGraphicsBeginImageContext(sz);
+    [img_mae drawInRect:CGRectMake(0, 0, sz.width, sz.height)];
+    img_ato = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:img_ato];
+    imageView.center = CGPointMake(160, 283);*/
+    
+    self.badgebg.image = img_mae;
+    
 
 }
 @end

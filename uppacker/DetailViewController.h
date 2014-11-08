@@ -19,6 +19,5 @@
 @property (strong, nonatomic) IBOutlet UIButton *backout;
 @property (strong, nonatomic) IBOutlet UIButton *goout;
 - (IBAction)setTargetBtn:(id)sender;
-@property (strong, nonatomic) IBOutlet UITextView *hosu;
 
 @end

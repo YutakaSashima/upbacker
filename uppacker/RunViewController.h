@@ -33,5 +33,6 @@
 - (IBAction)next:(id)sender;
 
 //@property (strong, nonatomic) IBOutlet UIImageView *nextout;
+- (IBAction)badge_get:(id)sender;
 
 @end
