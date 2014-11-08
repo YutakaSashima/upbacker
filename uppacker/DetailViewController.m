@@ -36,37 +36,37 @@
     }
     else if([self.selectCity  isEqualToString:@"バルセロナ"]){
         NSLog(@"2");
-        img_mae = [UIImage imageNamed:@"bal_photo.jpg"];  // リサイズ前UIImage
-        widthPer = 0.5;  // リサイズ後幅の倍率
-        heightPer = 0.5;  // リサイズ後高さの倍率
+        img_mae = [UIImage imageNamed:@"barcelona.png"];  // リサイズ前UIImage
+        widthPer = 0.7;  // リサイズ後幅の倍率
+        heightPer = 0.7;  // リサイズ後高さの倍率
         
     }
     else if([self.selectCity  isEqualToString:@"ミラノ"]){
         NSLog(@"3");
-        img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
-        widthPer = 0.2;  // リサイズ後幅の倍率
-        heightPer = 0.2;  // リサイズ後高さの倍率
+        img_mae = [UIImage imageNamed:@"milano.png"];  // リサイズ前UIImage
+        widthPer = 0.7;  // リサイズ後幅の倍率
+        heightPer = 0.7;  // リサイズ後高さの倍率
         
     }
     else if([self.selectCity  isEqualToString:@"ミュンヘン"]){
         NSLog(@"4");
-        img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
-        widthPer = 0.2;  // リサイズ後幅の倍率
-        heightPer = 0.2;  // リサイズ後高さの倍率
+        img_mae = [UIImage imageNamed:@"munich.png"];  // リサイズ前UIImage
+        widthPer = 0.7;  // リサイズ後幅の倍率
+        heightPer = 0.7;  // リサイズ後高さの倍率
         
     }
     else if([self.selectCity  isEqualToString:@"アムステルダム"]){
         NSLog(@"5");
-        img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
-        widthPer = 0.2;  // リサイズ後幅の倍率
-        heightPer = 0.2;  // リサイズ後高さの倍率
+        img_mae = [UIImage imageNamed:@"amsterdam.png"];  // リサイズ前UIImage
+        widthPer = 0.7;  // リサイズ後幅の倍率
+        heightPer = 0.7;  // リサイズ後高さの倍率
         
     }
     else if([self.selectCity  isEqualToString:@"ローマ"]){
         NSLog(@"6");
-        img_mae = [UIImage imageNamed:@"roma_photo.jpg"];  // リサイズ前UIImage
-        widthPer = 0.2;  // リサイズ後幅の倍率
-        heightPer = 0.2;  // リサイズ後高さの倍率
+        img_mae = [UIImage imageNamed:@"rome.png"];  // リサイズ前UIImage
+        widthPer = 0.7;  // リサイズ後幅の倍率
+        heightPer = 0.7;  // リサイズ後高さの倍率
         
     }
     else{

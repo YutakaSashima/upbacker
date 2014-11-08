@@ -36,6 +36,11 @@
 		4553291B1A0D7DB10025AD71 /* ASOTwoStateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 455329181A0D7DB10025AD71 /* ASOTwoStateButton.m */; };
 		45EF1B4F1A0DA1A4005152E1 /* run_p1.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EF1B4E1A0DA1A4005152E1 /* run_p1.png */; };
 		45EF1B521A0DAA36005152E1 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EF1B511A0DAA36005152E1 /* TopViewController.m */; };
+		45EF1B581A0DB928005152E1 /* rome.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EF1B531A0DB928005152E1 /* rome.png */; };
+		45EF1B591A0DB928005152E1 /* amsterdam.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EF1B541A0DB928005152E1 /* amsterdam.png */; };
+		45EF1B5A1A0DB928005152E1 /* munich.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EF1B551A0DB928005152E1 /* munich.png */; };
+		45EF1B5B1A0DB928005152E1 /* barcelona.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EF1B561A0DB928005152E1 /* barcelona.png */; };
+		45EF1B5C1A0DB928005152E1 /* milano.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EF1B571A0DB928005152E1 /* milano.png */; };
 		F5CE4D801A0CED2D006C0FFC /* MapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */; };
 		F5CE4D841A0CFB0F006C0FFC /* MapMission.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CE4D831A0CFB0F006C0FFC /* MapMission.m */; };
 		F5CE4D871A0D13C7006C0FFC /* badge_locked.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CE4D851A0D13C7006C0FFC /* badge_locked.png */; };
@@ -97,6 +102,11 @@
 		45EF1B4E1A0DA1A4005152E1 /* run_p1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = run_p1.png; sourceTree = "<group>"; };
 		45EF1B501A0DAA36005152E1 /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
 		45EF1B511A0DAA36005152E1 /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
+		45EF1B531A0DB928005152E1 /* rome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rome.png; sourceTree = "<group>"; };
+		45EF1B541A0DB928005152E1 /* amsterdam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amsterdam.png; sourceTree = "<group>"; };
+		45EF1B551A0DB928005152E1 /* munich.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = munich.png; sourceTree = "<group>"; };
+		45EF1B561A0DB928005152E1 /* barcelona.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcelona.png; sourceTree = "<group>"; };
+		45EF1B571A0DB928005152E1 /* milano.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milano.png; sourceTree = "<group>"; };
 		F5CE4D7F1A0CED2D006C0FFC /* MapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapManager.m; sourceTree = "<group>"; };
 		F5CE4D811A0CED39006C0FFC /* MapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapManager.h; sourceTree = "<group>"; };
 		F5CE4D821A0CFB0F006C0FFC /* MapMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapMission.h; sourceTree = "<group>"; };
@@ -221,6 +231,11 @@
 		455328F41A0D038F0025AD71 /* Img */ = {
 			isa = PBXGroup;
 			children = (
+				45EF1B531A0DB928005152E1 /* rome.png */,
+				45EF1B541A0DB928005152E1 /* amsterdam.png */,
+				45EF1B551A0DB928005152E1 /* munich.png */,
+				45EF1B561A0DB928005152E1 /* barcelona.png */,
+				45EF1B571A0DB928005152E1 /* milano.png */,
 				45EF1B4E1A0DA1A4005152E1 /* run_p1.png */,
 				455329061A0D73DD0025AD71 /* bal_photo.jpg */,
 				455329041A0D4A7B0025AD71 /* roma_photo.jpg */,
@@ -354,9 +369,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5CE4D881A0D13C7006C0FFC /* badge_unlocked.png in Resources */,
+				45EF1B5A1A0DB928005152E1 /* munich.png in Resources */,
 				455328CF1A0CE9840025AD71 /* Main.storyboard in Resources */,
+				45EF1B5C1A0DB928005152E1 /* milano.png in Resources */,
 				455329001A0D3E8B0025AD71 /* roma.png in Resources */,
+				45EF1B5B1A0DB928005152E1 /* barcelona.png in Resources */,
 				455329191A0D7DB10025AD71 /* .gitkeep in Resources */,
+				45EF1B581A0DB928005152E1 /* rome.png in Resources */,
 				455329051A0D4A7B0025AD71 /* roma_photo.jpg in Resources */,
 				455328F81A0D071A0025AD71 /* dash.png in Resources */,
 				45EF1B4F1A0DA1A4005152E1 /* run_p1.png in Resources */,
@@ -364,6 +383,7 @@
 				F5CE4D871A0D13C7006C0FFC /* badge_locked.png in Resources */,
 				455329071A0D73DD0025AD71 /* bal_photo.jpg in Resources */,
 				455328D11A0CE9840025AD71 /* Images.xcassets in Resources */,
+				45EF1B591A0DB928005152E1 /* amsterdam.png in Resources */,
 				455328F61A0D039E0025AD71 /* pari.jpg in Resources */,
 				455328FE1A0D15E50025AD71 /* location.plist in Resources */,
 			);

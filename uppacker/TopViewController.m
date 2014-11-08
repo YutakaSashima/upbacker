@@ -38,8 +38,8 @@
     
     //初期の配置
     CLLocationCoordinate2D co;
-    co.latitude = 41.48; // 経度
-    co.longitude = 12.14; // 緯度
+    co.latitude = 48.58; // 経度
+    co.longitude = 2.08; // 緯度
     [self.map setCenterCoordinate:co animated:YES];
     [self.map addAnnotations:[self createAnnotations]];
     
