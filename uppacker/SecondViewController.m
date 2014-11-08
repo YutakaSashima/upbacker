@@ -114,7 +114,7 @@
 - (IBAction)goTop:(id)sender {
     RunViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"RunView"];
     //ビューコントローラの表示
-    [self presentModalViewController:run animated:YES];
+    [self presentViewController:run animated:NO completion:nil];
 
 }
 
@@ -122,7 +122,7 @@
     FirstViewController *secondVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"map"];
     
     //secondVC.secondNum = self.firstNum;
-    [self presentViewController:secondVC animated:YES completion:nil];
+    [self presentViewController:secondVC animated:NO completion:nil];
 
 }
 @end

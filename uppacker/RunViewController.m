@@ -115,7 +115,8 @@
     [self.badgebtnout setBackgroundImage:imgs3 forState:UIControlStateNormal];
     
 
-    
+    UIImage *imgs4 = [UIImage imageNamed:@"forward"];
+    [self.nextbtnout setBackgroundImage:imgs4 forState:UIControlStateNormal];
     
 }
 
@@ -146,7 +147,7 @@
 
 //ダッシュボタン
 - (IBAction)dash:(id)sender {
-    [[MapManager sharedManager] addMoveDistance:100000];
+    /*[[MapManager sharedManager] addMoveDistance:100000];
     NSLog(@"walkcnt:%d :%lf",[MapManager sharedManager].walkCount,[MapManager sharedManager].ratio);
     self.goaldist.text = @"残り100歩";
 
@@ -163,7 +164,7 @@
      } completion:^(BOOL finished) {
          // アニメーション終了時
          NSLog(@"アニメーション終了");
-     }];
+     }];*/
 }
 - (IBAction)backmenu:(id)sender {
     [ self dismissViewControllerAnimated:YES completion:nil];
@@ -178,7 +179,7 @@
     FirstViewController *secondVC =  [self.storyboard instantiateViewControllerWithIdentifier:@"map"];
     
     //secondVC.secondNum = self.firstNum;
-    [self presentViewController:secondVC animated:YES completion:nil];
+    [self presentViewController:secondVC animated:NO completion:nil];
     
 }
 
@@ -186,7 +187,30 @@
     
     SecondViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondView"];
     //ビューコントローラの表示
-    [self presentModalViewController:run animated:YES];
+    [self presentModalViewController:run animated:NO];
 
+}
+- (IBAction)next:(id)sender {
+    UIImage *img_mae;
+    if([MapManager sharedManager].globalCnt == 0){
+        //UIImage *img_mae = [UIImage imageNamed:@"top_0.png"];  // リサイズ前UIImage
+        img_mae = [UIImage imageNamed:@"run_50.png"];  // リサイズ前UIImage
+
+        
+    }
+    else if([MapManager sharedManager].globalCnt == 1){
+        img_mae = [UIImage imageNamed:@"run_100.png"];  // リサイズ前UIImage
+        
+    }
+    else{
+        img_mae = [UIImage imageNamed:@"run_100.png"];  // リサイズ前UIImage
+        
+    }
+    [MapManager sharedManager].globalCnt++;
+    self.targetPoint.image = img_mae;
+
+    
+    //画像切替
+    
 }
 @end

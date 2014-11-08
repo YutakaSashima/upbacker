@@ -194,7 +194,8 @@ calloutAccessoryControlTapped:(UIControl*)control {
     
     RunViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"RunView"];
     //ビューコントローラの表示
-    [self presentModalViewController:run animated:NO];
+    //[self presentModalViewController:run animated:NO];
+    [self presentViewController:run animated:NO completion:nil];
     
     
 }
@@ -205,9 +206,9 @@ calloutAccessoryControlTapped:(UIControl*)control {
     
     SecondViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondView"];
     //ビューコントローラの表示
-    [self presentModalViewController:run animated:NO];
+    //[self presentModalViewController:run animated:NO];
 
-    
+    [self presentViewController:run animated:NO completion:nil];
     
 }
 @end

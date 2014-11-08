@@ -68,6 +68,7 @@ static MapManager *sharedData_ = nil;
     
     self.walkCount = 0;
     self.ratio = 0.0;
+    self.globalCnt = 0;
   }
   return self;
 }

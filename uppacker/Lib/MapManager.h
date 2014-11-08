@@ -47,6 +47,9 @@
 // 目的地まで何割進んだか。0.0〜1.0で返します。
 @property double ratio;
 
+//グローバルカウンタ
+@property int globalCnt;
+
 + (MapManager *)sharedManager;
 
 /**

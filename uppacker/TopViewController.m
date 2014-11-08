@@ -81,7 +81,10 @@
     
     RunViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"RunView"];
     //ビューコントローラの表示
-    [self presentModalViewController:run animated:YES];
+    
+    //run.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
+    [self presentModalViewController:run animated:NO];
 }
 
 - (IBAction)openBg:(id)sender {
@@ -90,7 +93,8 @@
     
     SecondViewController *run = [self.storyboard instantiateViewControllerWithIdentifier:@"SecondView"];
     //ビューコントローラの表示
-    [self presentModalViewController:run animated:YES];
+    //[self presentModalViewController:run animated:YES];
+    [self presentViewController:run animated:NO completion:nil];
 
 }
 

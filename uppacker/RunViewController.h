@@ -25,8 +25,13 @@
 - (IBAction)tobg:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIButton *topbtnout;
+@property (strong, nonatomic) IBOutlet UIButton *nextbtnout;
 
 @property (strong, nonatomic) IBOutlet UIButton *mapbtnout;
 @property (strong, nonatomic) IBOutlet UIButton *badgebtnout;
+
+- (IBAction)next:(id)sender;
+
+//@property (strong, nonatomic) IBOutlet UIImageView *nextout;
 
 @end

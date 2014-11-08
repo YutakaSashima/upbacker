@@ -30,8 +30,8 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqA-eg-kS1">
-                                <rect key="frame" x="39" y="550" width="45" height="30"/>
-                                <state key="normal" title="トップ">
+                                <rect key="frame" x="39" y="550" width="30" height="30"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -39,14 +39,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbS-le-zTk">
-                                <rect key="frame" x="106" y="550" width="60" height="30"/>
-                                <state key="normal" title="★マップ">
+                                <rect key="frame" x="106" y="550" width="30" height="30"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pf-W3-gbq">
-                                <rect key="frame" x="197" y="550" width="45" height="30"/>
-                                <state key="normal" title="バッジ">
+                                <rect key="frame" x="197" y="550" width="30" height="30"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -103,8 +103,8 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5E-0M-RqE">
-                                <rect key="frame" x="104" y="513" width="45" height="30"/>
-                                <state key="normal" title="マップ">
+                                <rect key="frame" x="104" y="513" width="30" height="30"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -112,14 +112,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8f5-1S-dAg">
-                                <rect key="frame" x="175" y="513" width="60" height="30"/>
-                                <state key="normal" title="★バッジ">
+                                <rect key="frame" x="175" y="513" width="30" height="30"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBG-MW-rHH">
-                                <rect key="frame" x="33" y="513" width="45" height="30"/>
-                                <state key="normal" title="トップ">
+                                <rect key="frame" x="33" y="513" width="30" height="30"/>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -229,8 +229,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moy-oc-WRA">
-                                <rect key="frame" x="44" y="0.0" width="260" height="471"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="moy-oc-WRA">
+                                <rect key="frame" x="-180" y="64" width="260" height="471"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="MOb-Vq-mx7"/>
                                     <constraint firstAttribute="height" constant="520" id="hmf-J6-3n0"/>
@@ -261,6 +261,15 @@
                                     <action selector="backmenu:" destination="5Ma-mG-pk3" eventType="touchUpInside" id="rlx-0I-JOK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rP-fe-OAS">
+                                <rect key="frame" x="191" y="540" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tomapbtn:" destination="5Ma-mG-pk3" eventType="touchUpInside" id="3rX-H0-cyL"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCS-T0-b4B">
                                 <rect key="frame" x="356" y="540" width="30" height="30"/>
                                 <state key="normal">
@@ -276,22 +285,22 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rP-fe-OAS">
-                                <rect key="frame" x="191" y="540" width="30" height="30"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74X-Kp-0KS" userLabel="next">
+                                <rect key="frame" x="533" y="20" width="22" height="22"/>
                                 <connections>
-                                    <action selector="tomapbtn:" destination="5Ma-mG-pk3" eventType="touchUpInside" id="3rX-H0-cyL"/>
+                                    <action selector="next:" destination="5Ma-mG-pk3" eventType="touchUpInside" id="Ujg-cc-2OB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kXs-5H-o3s" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" constant="62" id="8vc-Ww-3Lb"/>
+                            <constraint firstItem="74X-Kp-0KS" firstAttribute="top" secondItem="q3J-bw-ibs" secondAttribute="top" constant="10" id="BuQ-wT-HNt"/>
                             <constraint firstAttribute="bottom" secondItem="3rP-fe-OAS" secondAttribute="bottom" constant="7" id="C9E-gP-KM0"/>
                             <constraint firstAttribute="trailing" secondItem="nko-jh-ZZJ" secondAttribute="trailing" constant="119" id="Gbq-t5-2cU"/>
                             <constraint firstAttribute="bottom" secondItem="wCS-T0-b4B" secondAttribute="bottom" constant="10" id="Muc-bN-ihP"/>
+                            <constraint firstAttribute="trailing" secondItem="74X-Kp-0KS" secondAttribute="trailing" constant="10" id="UZ2-zH-R8f"/>
+                            <constraint firstItem="moy-oc-WRA" firstAttribute="top" secondItem="q3J-bw-ibs" secondAttribute="top" id="Zbv-ve-IwL"/>
                             <constraint firstItem="uka-Il-ExC" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" constant="130" id="aoR-j0-CmH"/>
                             <constraint firstItem="nko-jh-ZZJ" firstAttribute="top" secondItem="WQ0-EA-uFl" secondAttribute="bottom" constant="68" id="gZ0-BB-IRp"/>
                             <constraint firstItem="yG4-4C-2aE" firstAttribute="leading" secondItem="q3J-bw-ibs" secondAttribute="leading" constant="10" id="njJ-05-vuC"/>
@@ -306,6 +315,7 @@
                         <outlet property="badgebtnout" destination="wCS-T0-b4B" id="tvl-0A-Q8k"/>
                         <outlet property="goaldist" destination="yG4-4C-2aE" id="A5h-tf-Rx0"/>
                         <outlet property="mapbtnout" destination="3rP-fe-OAS" id="VVZ-LX-QCN"/>
+                        <outlet property="nextbtnout" destination="74X-Kp-0KS" id="AYm-hy-KES"/>
                         <outlet property="playerImg" destination="nko-jh-ZZJ" id="fti-aU-pga"/>
                         <outlet property="targetPoint" destination="moy-oc-WRA" id="tW3-d4-PXk"/>
                         <outlet property="topbtnout" destination="kXs-5H-o3s" id="mRt-Vo-p2s"/>
