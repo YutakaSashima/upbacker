@@ -16,5 +16,7 @@
 @property (strong, nonatomic) NSString *selectCity;
 @property (strong, nonatomic) IBOutlet MKMapView *bgmap;
 @property (strong, nonatomic) IBOutlet UITextView *detailtext;
+@property (strong, nonatomic) IBOutlet UIButton *backout;
+@property (strong, nonatomic) IBOutlet UIButton *goout;
 
 @end

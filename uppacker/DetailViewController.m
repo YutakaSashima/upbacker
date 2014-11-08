@@ -28,6 +28,19 @@
     [super viewDidLoad];
     
     
+    /*UIImage *imgb = [UIImage imageNamed:@"back.png"];
+    //ボタンのインスタンスを作成します。
+    UIButton *button = [[UIButton alloc] init];
+    //ボタンに画像を設定します。
+    [button setBackgroundImage:imgb forState:UIControlStateNormal];
+    
+    
+*/
+    UIImage *imgs = [UIImage imageNamed:@"set.png"];
+    [self.goout setBackgroundImage:imgs forState:UIControlStateNormal];
+
+    UIImage *imgb = [UIImage imageNamed:@"back.png"];
+    [self.backout setBackgroundImage:imgb forState:UIControlStateNormal];
     
     
     //自分でメッセージ受けるように設定
