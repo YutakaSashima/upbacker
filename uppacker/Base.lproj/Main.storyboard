@@ -237,18 +237,15 @@
                                     <action selector="back:" destination="Fgz-Hn-wiQ" eventType="touchUpInside" id="Ujf-0C-mB7"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olR-Ca-sSI">
-                                <rect key="frame" x="24" y="328" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="SiW-Md-cah"/>
-                                    <constraint firstAttribute="height" constant="800" id="UIW-4c-NMq"/>
-                                </constraints>
-                            </mapView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ro-9M-y8h">
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ro-9M-y8h">
                                 <rect key="frame" x="31" y="122" width="240" height="106"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="106" id="FE8-Xo-TWZ"/>
+                                    <constraint firstAttribute="height" constant="140" id="FE8-Xo-TWZ"/>
                                     <constraint firstAttribute="width" constant="240" id="iIM-2X-G9g"/>
                                 </constraints>
                                 <string key="text">ローマは、イタリアの首都。欧州有数の世界都市であり、ラツィオ州の州都、ローマ県のコムーネの一つで、ローマ県の県都でもある。英語とフランス語の表記は「Rome」。 
@@ -256,6 +253,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olR-Ca-sSI">
+                                <rect key="frame" x="24" y="328" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="SiW-Md-cah"/>
+                                    <constraint firstAttribute="height" constant="500" id="UIW-4c-NMq"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -273,6 +277,7 @@
                     </view>
                     <connections>
                         <outlet property="bgmap" destination="olR-Ca-sSI" id="eEP-e8-NKx"/>
+                        <outlet property="detailtext" destination="0ro-9M-y8h" id="79H-Zk-czA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUC-KC-hTt" userLabel="First Responder" sceneMemberID="firstResponder"/>

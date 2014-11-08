@@ -100,6 +100,7 @@
         img_mae = [UIImage imageNamed:@"rome.png"];  // リサイズ前UIImage
         widthPer = 0.7;  // リサイズ後幅の倍率
         heightPer = 0.7;  // リサイズ後高さの倍率
+        self.detailtext.text = @"test";
         
     }
     else{

@@ -15,5 +15,6 @@
 //選んだ街名
 @property (strong, nonatomic) NSString *selectCity;
 @property (strong, nonatomic) IBOutlet MKMapView *bgmap;
+@property (strong, nonatomic) IBOutlet UITextView *detailtext;
 
 @end
